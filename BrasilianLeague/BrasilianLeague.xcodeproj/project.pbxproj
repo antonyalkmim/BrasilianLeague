@@ -171,6 +171,7 @@
 				739ECF67295DDC5000B79A27 /* Frameworks */,
 				739ECF68295DDC5000B79A27 /* Resources */,
 				739ECFF0295DDD3D00B79A27 /* Embed Frameworks */,
+				739ED020295DE2DE00B79A27 /* Swiftlint */,
 			);
 			buildRules = (
 			);
@@ -286,6 +287,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		739ED020295DE2DE00B79A27 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "$HOME/.mint/bin/swiftlint\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		739ECF66295DDC5000B79A27 /* Sources */ = {
