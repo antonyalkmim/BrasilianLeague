@@ -11,6 +11,8 @@ import UIKit
 
 final class GameListView: ContainerView {
 
+    private var items: [GameSummary] = []
+
     // MARK: - Subviews
 
     lazy var tableView = UITableView() .. {
@@ -31,6 +33,11 @@ final class GameListView: ContainerView {
     override func configureConstraints() {
         tableView.edgesToSuperview()
     }
+
+    func setItems(_ items: [GameSummary]) {
+        self.items = items
+        tableView.reloadData()
+    }
 }
 
 // MARK: - UITableViewDataSource
@@ -38,11 +45,13 @@ final class GameListView: ContainerView {
 extension GameListView: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        items.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        tableView.dequeueReusableCell(type: GameListCell.self, indexPath: indexPath)
+        tableView.dequeueReusableCell(type: GameListCell.self, indexPath: indexPath) .. {
+            $0.bind(game: items[indexPath.row])
+        }
     }
 }
 

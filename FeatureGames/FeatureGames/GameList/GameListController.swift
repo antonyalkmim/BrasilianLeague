@@ -21,6 +21,7 @@ final class GameListController: Controller {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Jogos"
+        rootView.setItems(viewModel.getGames())
     }
 
     override func loadView() {

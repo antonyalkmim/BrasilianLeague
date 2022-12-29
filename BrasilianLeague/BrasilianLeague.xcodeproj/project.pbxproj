@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		73319AD8295E42D500336E61 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 73319AD7295E42D500336E61 /* Nuke */; };
 		739ECF6E295DDC5000B79A27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739ECF6D295DDC5000B79A27 /* AppDelegate.swift */; };
 		739ECF70295DDC5000B79A27 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739ECF6F295DDC5000B79A27 /* SceneDelegate.swift */; };
 		739ECF72295DDC5000B79A27 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739ECF71295DDC5000B79A27 /* ViewController.swift */; };
@@ -79,6 +80,7 @@
 				739ECFEE295DDD3D00B79A27 /* Core.framework in Frameworks */,
 				739ED014295DDDCE00B79A27 /* FeatureGames.framework in Frameworks */,
 				739ED22F295E128200B79A27 /* TinyConstraints in Frameworks */,
+				73319AD8295E42D500336E61 /* Nuke in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +181,7 @@
 			name = BrasilianLeague;
 			packageProductDependencies = (
 				739ED22E295E128200B79A27 /* TinyConstraints */,
+				73319AD7295E42D500336E61 /* Nuke */,
 			);
 			productName = BrasilianLeague;
 			productReference = 739ECF6A295DDC5000B79A27 /* BrasilianLeague.app */;
@@ -254,6 +257,7 @@
 			mainGroup = 739ECF61295DDC5000B79A27;
 			packageReferences = (
 				739ED22D295E128200B79A27 /* XCRemoteSwiftPackageReference "TinyConstraints" */,
+				73319AD6295E42D500336E61 /* XCRemoteSwiftPackageReference "Nuke" */,
 			);
 			productRefGroup = 739ECF6B295DDC5000B79A27 /* Products */;
 			projectDirPath = "";
@@ -655,6 +659,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		73319AD6295E42D500336E61 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 		739ED22D295E128200B79A27 /* XCRemoteSwiftPackageReference "TinyConstraints" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/roberthein/TinyConstraints.git";
@@ -666,6 +678,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		73319AD7295E42D500336E61 /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 73319AD6295E42D500336E61 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
 		739ED22E295E128200B79A27 /* TinyConstraints */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 739ED22D295E128200B79A27 /* XCRemoteSwiftPackageReference "TinyConstraints" */;

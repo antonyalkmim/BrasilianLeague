@@ -6,6 +6,7 @@
 //
 
 import Core
+import Nuke
 import TinyConstraints
 import UIKit
 
@@ -27,10 +28,20 @@ final class GameListCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        Nuke.cancelRequest(for: gameSummaryView.mandatoryBrandImageView)
+        Nuke.cancelRequest(for: gameSummaryView.visitorBrandImageView)
+    }
+
     // MARK: - Configuration
 
     private func configure() {
         addSubview(gameSummaryView)
         gameSummaryView.edgesToSuperview()
+    }
+
+    func bind(game: GameSummary) {
+        gameSummaryView.bind(game)
     }
 }

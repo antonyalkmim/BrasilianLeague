@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		733198C9295E36B400336E61 /* GameSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733198C8295E36B400336E61 /* GameSummary.swift */; };
+		733198CC295E37E500336E61 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733198CB295E37E500336E61 /* Team.swift */; };
+		733198CF295E3D6C00336E61 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 733198CE295E3D6C00336E61 /* Nuke */; };
 		739ED004295DDDA400B79A27 /* FeatureGames.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 739ECFFB295DDDA300B79A27 /* FeatureGames.framework */; };
 		739ED009295DDDA400B79A27 /* FeatureGamesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739ED008295DDDA400B79A27 /* FeatureGamesTests.swift */; };
 		739ED00A295DDDA400B79A27 /* FeatureGames.h in Headers */ = {isa = PBXBuildFile; fileRef = 739ECFFE295DDDA300B79A27 /* FeatureGames.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -46,6 +49,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		733198C8295E36B400336E61 /* GameSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSummary.swift; sourceTree = "<group>"; };
+		733198CB295E37E500336E61 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		739ECFFB295DDDA300B79A27 /* FeatureGames.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FeatureGames.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		739ECFFE295DDDA300B79A27 /* FeatureGames.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeatureGames.h; sourceTree = "<group>"; };
 		739ED003295DDDA400B79A27 /* FeatureGamesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeatureGamesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				733198CF295E3D6C00336E61 /* Nuke in Frameworks */,
 				739ED018295DDDD900B79A27 /* Core.framework in Frameworks */,
 				739ED235295E136300B79A27 /* TinyConstraints in Frameworks */,
 			);
@@ -80,6 +86,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		733198C7295E369D00336E61 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				733198CA295E37DA00336E61 /* Models */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		733198CA295E37DA00336E61 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				733198C8295E36B400336E61 /* GameSummary.swift */,
+				733198CB295E37E500336E61 /* Team.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		739ECFF1295DDDA300B79A27 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +125,7 @@
 		739ECFFD295DDDA300B79A27 /* FeatureGames */ = {
 			isa = PBXGroup;
 			children = (
+				733198C7295E369D00336E61 /* Data */,
 				73F59DC0295E2C530072985B /* Shared */,
 				739ED21F295E095F00B79A27 /* GameList */,
 				739ECFFE295DDDA300B79A27 /* FeatureGames.h */,
@@ -177,6 +201,7 @@
 			name = FeatureGames;
 			packageProductDependencies = (
 				739ED234295E136300B79A27 /* TinyConstraints */,
+				733198CE295E3D6C00336E61 /* Nuke */,
 			);
 			productName = FeatureGames;
 			productReference = 739ECFFB295DDDA300B79A27 /* FeatureGames.framework */;
@@ -230,6 +255,7 @@
 			mainGroup = 739ECFF1295DDDA300B79A27;
 			packageReferences = (
 				739ED233295E136300B79A27 /* XCRemoteSwiftPackageReference "TinyConstraints" */,
+				733198CD295E3D6C00336E61 /* XCRemoteSwiftPackageReference "Nuke" */,
 			);
 			productRefGroup = 739ECFFC295DDDA300B79A27 /* Products */;
 			projectDirPath = "";
@@ -289,7 +315,9 @@
 				739ED221295E097400B79A27 /* GameListController.swift in Sources */,
 				739ED228295E0BC500B79A27 /* GameListView.swift in Sources */,
 				739ED226295E0A7500B79A27 /* GameListViewModel.swift in Sources */,
+				733198CC295E37E500336E61 /* Team.swift in Sources */,
 				73F59DBA295E24150072985B /* GameListCell.swift in Sources */,
+				733198C9295E36B400336E61 /* GameSummary.swift in Sources */,
 				73F59DBF295E2C4B0072985B /* GameSumaryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -559,6 +587,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		733198CD295E3D6C00336E61 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
 		739ED233295E136300B79A27 /* XCRemoteSwiftPackageReference "TinyConstraints" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/roberthein/TinyConstraints.git";
@@ -570,6 +606,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		733198CE295E3D6C00336E61 /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 733198CD295E3D6C00336E61 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
 		739ED234295E136300B79A27 /* TinyConstraints */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 739ED233295E136300B79A27 /* XCRemoteSwiftPackageReference "TinyConstraints" */;
