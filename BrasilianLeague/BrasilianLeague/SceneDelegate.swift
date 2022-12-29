@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FeatureGames
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -16,7 +17,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         willConnectTo session: UISceneSession,
         options connectionOptions: UIScene.ConnectionOptions
     ) {
-         // guard let _ = (scene as? UIWindowScene) else { return }
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+
+        let gamesCoordinator = GamesCoordinator()
+        gamesCoordinator.navigate(to: .list)
+
+        window = UIWindow(windowScene: windowScene)
+        window?.rootViewController = gamesCoordinator
+        window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) { }
