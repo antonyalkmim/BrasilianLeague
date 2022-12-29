@@ -5,6 +5,7 @@
 //  Created by antony.alkmim on 29/12/22.
 //
 
+import TinyConstraints
 import UIKit
 
 public protocol Route { }
@@ -36,10 +37,7 @@ open class Coordinator<RouteType: Route, ResultType: CoordinatorResult>: UIViewC
 
         addChild(controller)
         view.addSubview(controller.view)
-        controller.view.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        controller.view.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        controller.view.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        controller.view.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        controller.view.edgesToSuperview()
         controller.didMove(toParent: self)
     }
 

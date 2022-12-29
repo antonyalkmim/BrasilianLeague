@@ -19,6 +19,7 @@
 		739ECFEF295DDD3D00B79A27 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 739ECFED295DDD3D00B79A27 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		739ED014295DDDCE00B79A27 /* FeatureGames.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 739ED013295DDDCE00B79A27 /* FeatureGames.framework */; };
 		739ED015295DDDCE00B79A27 /* FeatureGames.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 739ED013295DDDCE00B79A27 /* FeatureGames.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		739ED22F295E128200B79A27 /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = 739ED22E295E128200B79A27 /* TinyConstraints */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 			files = (
 				739ECFEE295DDD3D00B79A27 /* Core.framework in Frameworks */,
 				739ED014295DDDCE00B79A27 /* FeatureGames.framework in Frameworks */,
+				739ED22F295E128200B79A27 /* TinyConstraints in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,6 +177,9 @@
 			dependencies = (
 			);
 			name = BrasilianLeague;
+			packageProductDependencies = (
+				739ED22E295E128200B79A27 /* TinyConstraints */,
+			);
 			productName = BrasilianLeague;
 			productReference = 739ECF6A295DDC5000B79A27 /* BrasilianLeague.app */;
 			productType = "com.apple.product-type.application";
@@ -247,6 +252,9 @@
 				Base,
 			);
 			mainGroup = 739ECF61295DDC5000B79A27;
+			packageReferences = (
+				739ED22D295E128200B79A27 /* XCRemoteSwiftPackageReference "TinyConstraints" */,
+			);
 			productRefGroup = 739ECF6B295DDC5000B79A27 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -645,6 +653,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		739ED22D295E128200B79A27 /* XCRemoteSwiftPackageReference "TinyConstraints" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/roberthein/TinyConstraints.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		739ED22E295E128200B79A27 /* TinyConstraints */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 739ED22D295E128200B79A27 /* XCRemoteSwiftPackageReference "TinyConstraints" */;
+			productName = TinyConstraints;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 739ECF62295DDC5000B79A27 /* Project object */;
 }

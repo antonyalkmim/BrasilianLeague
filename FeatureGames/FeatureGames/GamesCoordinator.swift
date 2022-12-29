@@ -27,8 +27,8 @@ public final class GamesCoordinator: Coordinator<GamesRoute, GamesResult> {
     override public func navigate(to route: GamesRoute) {
         switch route {
         case .list:
-            let controller = UIViewController()
-            controller.view.backgroundColor = .red
+            let viewModel = GameListViewModel(coordinator: self)
+            let controller = GameListController(viewModel: viewModel)
             navigation.setViewControllers([controller], animated: true)
 
         case .details:

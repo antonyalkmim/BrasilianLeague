@@ -13,6 +13,10 @@
 		739ED018295DDDD900B79A27 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 739ED017295DDDD900B79A27 /* Core.framework */; };
 		739ED019295DDDD900B79A27 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 739ED017295DDDD900B79A27 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		739ED025295DE4DE00B79A27 /* GamesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739ED024295DE4DE00B79A27 /* GamesCoordinator.swift */; };
+		739ED221295E097400B79A27 /* GameListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739ED220295E097400B79A27 /* GameListController.swift */; };
+		739ED226295E0A7500B79A27 /* GameListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739ED225295E0A7500B79A27 /* GameListViewModel.swift */; };
+		739ED228295E0BC500B79A27 /* GameListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739ED227295E0BC500B79A27 /* GameListView.swift */; };
+		739ED235295E136300B79A27 /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = 739ED234295E136300B79A27 /* TinyConstraints */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +50,9 @@
 		739ED008295DDDA400B79A27 /* FeatureGamesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureGamesTests.swift; sourceTree = "<group>"; };
 		739ED017295DDDD900B79A27 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		739ED024295DE4DE00B79A27 /* GamesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesCoordinator.swift; sourceTree = "<group>"; };
+		739ED220295E097400B79A27 /* GameListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListController.swift; sourceTree = "<group>"; };
+		739ED225295E0A7500B79A27 /* GameListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListViewModel.swift; sourceTree = "<group>"; };
+		739ED227295E0BC500B79A27 /* GameListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +61,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				739ED018295DDDD900B79A27 /* Core.framework in Frameworks */,
+				739ED235295E136300B79A27 /* TinyConstraints in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +98,7 @@
 		739ECFFD295DDDA300B79A27 /* FeatureGames */ = {
 			isa = PBXGroup;
 			children = (
+				739ED21F295E095F00B79A27 /* GameList */,
 				739ECFFE295DDDA300B79A27 /* FeatureGames.h */,
 				739ED024295DE4DE00B79A27 /* GamesCoordinator.swift */,
 			);
@@ -110,6 +119,16 @@
 				739ED017295DDDD900B79A27 /* Core.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		739ED21F295E095F00B79A27 /* GameList */ = {
+			isa = PBXGroup;
+			children = (
+				739ED220295E097400B79A27 /* GameListController.swift */,
+				739ED225295E0A7500B79A27 /* GameListViewModel.swift */,
+				739ED227295E0BC500B79A27 /* GameListView.swift */,
+			);
+			path = GameList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +161,9 @@
 			dependencies = (
 			);
 			name = FeatureGames;
+			packageProductDependencies = (
+				739ED234295E136300B79A27 /* TinyConstraints */,
+			);
 			productName = FeatureGames;
 			productReference = 739ECFFB295DDDA300B79A27 /* FeatureGames.framework */;
 			productType = "com.apple.product-type.framework";
@@ -192,6 +214,9 @@
 				Base,
 			);
 			mainGroup = 739ECFF1295DDDA300B79A27;
+			packageReferences = (
+				739ED233295E136300B79A27 /* XCRemoteSwiftPackageReference "TinyConstraints" */,
+			);
 			productRefGroup = 739ECFFC295DDDA300B79A27 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -247,6 +272,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				739ED025295DE4DE00B79A27 /* GamesCoordinator.swift in Sources */,
+				739ED221295E097400B79A27 /* GameListController.swift in Sources */,
+				739ED228295E0BC500B79A27 /* GameListView.swift in Sources */,
+				739ED226295E0A7500B79A27 /* GameListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,6 +541,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		739ED233295E136300B79A27 /* XCRemoteSwiftPackageReference "TinyConstraints" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/roberthein/TinyConstraints.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		739ED234295E136300B79A27 /* TinyConstraints */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 739ED233295E136300B79A27 /* XCRemoteSwiftPackageReference "TinyConstraints" */;
+			productName = TinyConstraints;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 739ECFF2295DDDA300B79A27 /* Project object */;
 }

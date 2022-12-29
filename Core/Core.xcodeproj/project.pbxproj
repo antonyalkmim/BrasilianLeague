@@ -10,8 +10,12 @@
 		739ECFD2295DDCD400B79A27 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 739ECFC9295DDCD400B79A27 /* Core.framework */; };
 		739ECFD7295DDCD400B79A27 /* CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739ECFD6295DDCD400B79A27 /* CoreTests.swift */; };
 		739ECFD8295DDCD400B79A27 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 739ECFCC295DDCD400B79A27 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		739ECFEB295DDD0F00B79A27 /* MyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739ECFEA295DDD0F00B79A27 /* MyView.swift */; };
 		739ED023295DE49000B79A27 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739ED022295DE49000B79A27 /* Coordinator.swift */; };
+		739ED21E295E091900B79A27 /* CascadeOperator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739ED21D295E091900B79A27 /* CascadeOperator.swift */; };
+		739ED224295E099F00B79A27 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739ED223295E099F00B79A27 /* Controller.swift */; };
+		739ED22A295E0CA500B79A27 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739ED229295E0CA500B79A27 /* ContainerView.swift */; };
+		739ED232295E134C00B79A27 /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = 739ED231295E134C00B79A27 /* TinyConstraints */; };
+		739ED237295E152200B79A27 /* Weakable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739ED236295E152200B79A27 /* Weakable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,8 +33,11 @@
 		739ECFCC295DDCD400B79A27 /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		739ECFD1295DDCD400B79A27 /* CoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		739ECFD6295DDCD400B79A27 /* CoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreTests.swift; sourceTree = "<group>"; };
-		739ECFEA295DDD0F00B79A27 /* MyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyView.swift; sourceTree = "<group>"; };
 		739ED022295DE49000B79A27 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		739ED21D295E091900B79A27 /* CascadeOperator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CascadeOperator.swift; sourceTree = "<group>"; };
+		739ED223295E099F00B79A27 /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
+		739ED229295E0CA500B79A27 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
+		739ED236295E152200B79A27 /* Weakable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weakable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				739ED232295E134C00B79A27 /* TinyConstraints in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,9 +81,9 @@
 		739ECFCB295DDCD400B79A27 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				739ED222295E098000B79A27 /* CustomTypes */,
 				739ED021295DE48100B79A27 /* Coordinator */,
 				739ECFCC295DDCD400B79A27 /* Core.h */,
-				739ECFEA295DDD0F00B79A27 /* MyView.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -94,6 +102,17 @@
 				739ED022295DE49000B79A27 /* Coordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		739ED222295E098000B79A27 /* CustomTypes */ = {
+			isa = PBXGroup;
+			children = (
+				739ED21D295E091900B79A27 /* CascadeOperator.swift */,
+				739ED223295E099F00B79A27 /* Controller.swift */,
+				739ED229295E0CA500B79A27 /* ContainerView.swift */,
+				739ED236295E152200B79A27 /* Weakable.swift */,
+			);
+			path = CustomTypes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +144,9 @@
 			dependencies = (
 			);
 			name = Core;
+			packageProductDependencies = (
+				739ED231295E134C00B79A27 /* TinyConstraints */,
+			);
 			productName = Core;
 			productReference = 739ECFC9295DDCD400B79A27 /* Core.framework */;
 			productType = "com.apple.product-type.framework";
@@ -175,6 +197,9 @@
 				Base,
 			);
 			mainGroup = 739ECFBF295DDCD400B79A27;
+			packageReferences = (
+				739ED230295E134C00B79A27 /* XCRemoteSwiftPackageReference "TinyConstraints" */,
+			);
 			productRefGroup = 739ECFCA295DDCD400B79A27 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -229,8 +254,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				739ED22A295E0CA500B79A27 /* ContainerView.swift in Sources */,
+				739ED237295E152200B79A27 /* Weakable.swift in Sources */,
+				739ED21E295E091900B79A27 /* CascadeOperator.swift in Sources */,
 				739ED023295DE49000B79A27 /* Coordinator.swift in Sources */,
-				739ECFEB295DDD0F00B79A27 /* MyView.swift in Sources */,
+				739ED224295E099F00B79A27 /* Controller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -497,6 +525,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		739ED230295E134C00B79A27 /* XCRemoteSwiftPackageReference "TinyConstraints" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/roberthein/TinyConstraints.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		739ED231295E134C00B79A27 /* TinyConstraints */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 739ED230295E134C00B79A27 /* XCRemoteSwiftPackageReference "TinyConstraints" */;
+			productName = TinyConstraints;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 739ECFC0295DDCD400B79A27 /* Project object */;
 }
