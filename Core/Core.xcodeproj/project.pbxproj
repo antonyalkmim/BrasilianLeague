@@ -16,6 +16,7 @@
 		739ED22A295E0CA500B79A27 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739ED229295E0CA500B79A27 /* ContainerView.swift */; };
 		739ED232295E134C00B79A27 /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = 739ED231295E134C00B79A27 /* TinyConstraints */; };
 		739ED237295E152200B79A27 /* Weakable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739ED236295E152200B79A27 /* Weakable.swift */; };
+		73F59BBF295E20860072985B /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F59BBE295E20860072985B /* NavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		739ED223295E099F00B79A27 /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		739ED229295E0CA500B79A27 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
 		739ED236295E152200B79A27 /* Weakable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weakable.swift; sourceTree = "<group>"; };
+		73F59BBE295E20860072985B /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		739ECFCB295DDCD400B79A27 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				739ED238295E202100B79A27 /* UI */,
 				739ED222295E098000B79A27 /* CustomTypes */,
 				739ED021295DE48100B79A27 /* Coordinator */,
 				739ECFCC295DDCD400B79A27 /* Core.h */,
@@ -113,6 +116,14 @@
 				739ED236295E152200B79A27 /* Weakable.swift */,
 			);
 			path = CustomTypes;
+			sourceTree = "<group>";
+		};
+		739ED238295E202100B79A27 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				73F59BBE295E20860072985B /* NavigationController.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				739ED22A295E0CA500B79A27 /* ContainerView.swift in Sources */,
+				73F59BBF295E20860072985B /* NavigationController.swift in Sources */,
 				739ED237295E152200B79A27 /* Weakable.swift in Sources */,
 				739ED21E295E091900B79A27 /* CascadeOperator.swift in Sources */,
 				739ED023295DE49000B79A27 /* Coordinator.swift in Sources */,

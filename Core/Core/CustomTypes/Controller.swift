@@ -14,6 +14,7 @@ open class Controller: UIViewController {
     public init() {
         super.init(nibName: nil, bundle: nil)
         modalPresentationStyle = .fullScreen
+        navigationItem.largeTitleDisplayMode = .automatic
     }
 
     override public init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {

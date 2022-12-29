@@ -18,7 +18,7 @@ public enum GamesResult: CoordinatorResult { }
 
 public final class GamesCoordinator: Coordinator<GamesRoute, GamesResult> {
 
-    let navigation = UINavigationController()
+    let navigation = NavigationController()
 
     public init(_ didFinish: DidFinishCallback? = nil) {
         super.init(rootViewController: navigation, didFinish)

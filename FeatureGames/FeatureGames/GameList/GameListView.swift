@@ -49,7 +49,7 @@ final class GameListView: ContainerView {
     override func configureSubviews() {
         addSubview(containerStack)
 
-        backgroundColor = .white
+        backgroundColor = .red
     }
 
     override func configureConstraints() {

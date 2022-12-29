@@ -5,8 +5,9 @@
 //  Created by antony.alkmim on 29/12/22.
 //
 
-import UIKit
+import Core
 import FeatureGames
+import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -22,8 +23,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let gamesCoordinator = GamesCoordinator()
         gamesCoordinator.navigate(to: .list)
 
+        let mainController = UITabBarController()
+        mainController.setViewControllers([gamesCoordinator], animated: false)
+
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = gamesCoordinator
+        window?.rootViewController = mainController
         window?.makeKeyAndVisible()
     }
 

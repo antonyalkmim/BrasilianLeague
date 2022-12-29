@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
+        UINavigationBar.appearance().prefersLargeTitles = true
         return true
     }
 
