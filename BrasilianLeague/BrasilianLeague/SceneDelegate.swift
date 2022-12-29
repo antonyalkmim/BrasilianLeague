@@ -23,7 +23,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let gamesCoordinator = GamesCoordinator()
         gamesCoordinator.navigate(to: .list)
 
-        let mainController = UITabBarController()
+        let mainController = UITabBarController() .. {
+            $0.tabBar.isHidden = true
+        }
         mainController.setViewControllers([gamesCoordinator], animated: false)
 
         window = UIWindow(windowScene: windowScene)

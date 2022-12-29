@@ -11,54 +11,45 @@ import UIKit
 
 final class GameListView: ContainerView {
 
-    // MARK: - Properties
-
-    private let didTapShowDetails: () -> Void
-
     // MARK: - Subviews
 
-    private lazy var gameTitleLabel = UILabel() .. {
-        $0.text = "Flam vs Corinthians"
-        $0.textColor = .black
-    }
-
-    private lazy var showDetailsButton = UIButton() .. {
-        $0.setTitle("Mostrar detalhes", for: .normal)
-        $0.setTitleColor(UIColor.systemBlue, for: .normal)
-        $0.addTarget(self, action: #selector(showDetails), for: .touchUpInside)
-    }
-
-    private lazy var containerStack = UIStackView(
-        arrangedSubviews: [
-            gameTitleLabel,
-            showDetailsButton
-        ]
-    ) .. {
-        $0.axis = .vertical
-    }
-
-    // MARK: - Initializers
-
-    init(didTapShowDetails: @escaping () -> Void) {
-        self.didTapShowDetails = didTapShowDetails
-        super.init()
+    lazy var tableView = UITableView() .. {
+        $0.register(GameListCell.self)
+        $0.dataSource = self
+        $0.delegate = self
+        $0.separatorInset = .zero
     }
 
     // MARK: - View Setup
 
     override func configureSubviews() {
-        addSubview(containerStack)
+        addSubview(tableView)
 
-        backgroundColor = .red
+        backgroundColor = .systemBackground
     }
 
     override func configureConstraints() {
-        containerStack.centerInSuperview()
+        tableView.edgesToSuperview()
+    }
+}
+
+// MARK: - UITableViewDataSource
+
+extension GameListView: UITableViewDataSource {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        10
     }
 
-    // MARK: - Actions
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        tableView.dequeueReusableCell(type: GameListCell.self, indexPath: indexPath)
+    }
+}
 
-    @objc private func showDetails() {
-        didTapShowDetails()
+// MARK: - UITableViewDelegate
+
+extension GameListView: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("selected", indexPath.row)
     }
 }

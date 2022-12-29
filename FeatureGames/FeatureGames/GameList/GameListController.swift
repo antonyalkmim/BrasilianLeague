@@ -11,11 +11,7 @@ import UIKit
 final class GameListController: Controller {
 
     private let viewModel: GameListViewModel
-    private lazy var rootView = GameListView(
-        didTapShowDetails: weakify {
-            $0.viewModel.showDetails()
-        }
-    )
+    private lazy var rootView = GameListView()
 
     init(viewModel: GameListViewModel) {
         self.viewModel = viewModel
