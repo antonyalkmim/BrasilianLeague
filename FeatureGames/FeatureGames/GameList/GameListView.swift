@@ -12,6 +12,7 @@ import UIKit
 final class GameListView: ContainerView {
 
     private var items: [GameSummary] = []
+    private let onSelectGame: (GameSummary) -> Void
 
     // MARK: - Subviews
 
@@ -24,6 +25,13 @@ final class GameListView: ContainerView {
     }
 
     lazy var refreshControl = UIRefreshControl()
+
+    // MARK: - Initializer
+
+    init(onSelectGame: @escaping (GameSummary) -> Void) {
+        self.onSelectGame = onSelectGame
+        super.init()
+    }
 
     // MARK: - View Setup
 
@@ -63,6 +71,6 @@ extension GameListView: UITableViewDataSource {
 
 extension GameListView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("selected", indexPath.row)
+        onSelectGame(items[indexPath.row])
     }
 }

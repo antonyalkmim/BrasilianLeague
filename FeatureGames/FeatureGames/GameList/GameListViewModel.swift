@@ -51,4 +51,8 @@ struct GameListViewModel {
             )
         ]
     }
+
+    func selectGame(_ game: GameSummary) {
+        coordinator?.navigate(to: .details)
+    }
 }

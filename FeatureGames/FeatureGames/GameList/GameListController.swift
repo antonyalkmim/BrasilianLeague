@@ -11,7 +11,9 @@ import UIKit
 final class GameListController: Controller {
 
     private let viewModel: GameListViewModel
-    private lazy var rootView = GameListView()
+    private lazy var rootView = GameListView(
+        onSelectGame: weakify { $0.viewModel.selectGame($1) }
+    )
 
     init(viewModel: GameListViewModel) {
         self.viewModel = viewModel
