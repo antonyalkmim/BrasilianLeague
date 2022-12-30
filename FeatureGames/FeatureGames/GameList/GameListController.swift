@@ -24,7 +24,12 @@ final class GameListController: Controller {
         super.viewDidLoad()
         setupActions()
         navigationItem.title = L10n.List.title
-        rootView.setItems(viewModel.getGames())
+        loadGames()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        rootView.tableView.deselectAll()
     }
 
     override func loadView() {
@@ -35,15 +40,23 @@ final class GameListController: Controller {
         rootView.refreshControl.addTarget(self, action: #selector(refreshAction), for: .valueChanged)
     }
 
+    private func loadGames() {
+        rootView.refreshControl.beginRefreshing()
+
+        Task(priority: .userInitiated) {
+            do {
+                let games = try await viewModel.getGames()
+                rootView.setItems(games)
+            } catch {
+                print(error)
+            }
+        }
+
+    }
+
     @objc
     private func refreshAction() {
-        Timer.scheduledTimer(
-            withTimeInterval: 2,
-            repeats: false,
-            block: weakify { weakSelf, _ in
-                weakSelf.rootView.setItems(weakSelf.viewModel.getGames())
-            }
-        )
+        loadGames()
     }
 
 }

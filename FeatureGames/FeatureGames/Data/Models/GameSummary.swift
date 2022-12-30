@@ -7,7 +7,9 @@
 
 import Foundation
 
-struct GameSummary {
+struct GameSummary: Decodable {
+    let id: String
+
     let mandatoryTeam: Team
     let visitorTeam: Team
 

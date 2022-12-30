@@ -17,4 +17,9 @@ public extension UITableView {
         return dequeueReusableCell(withIdentifier: String(describing: T.self), for: indexPath) as? T ?? T()
     }
 
+    func deselectAll() {
+        for indexPath in indexPathsForSelectedRows ?? [] {
+            deselectRow(at: indexPath, animated: false)
+        }
+    }
 }
