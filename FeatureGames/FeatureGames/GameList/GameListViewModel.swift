@@ -30,7 +30,7 @@ struct GameListViewModel {
                 ),
                 mandatoryTeamGoals: 1,
                 visitorTeamGoals: 2,
-                eventTime: Date.now,
+                eventDate: Date.now,
                 stadiumName: "MARACANÃ"
             ),
             GameSummary(
@@ -46,7 +46,7 @@ struct GameListViewModel {
                 ),
                 mandatoryTeamGoals: 0,
                 visitorTeamGoals: 3,
-                eventTime: Date.now,
+                eventDate: Date.now,
                 stadiumName: "Beira-rio"
             )
         ]

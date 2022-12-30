@@ -97,8 +97,8 @@ final class GameSummaryView: ContainerView {
 
     func bind(_ game: GameSummary) {
 
-        let dateString = game.eventTime.formatted(date: .abbreviated, time: .omitted)
-        let timeString = game.eventTime.formatted(date: .omitted, time: .shortened)
+        let dateString = game.eventDate.formatted(date: .abbreviated, time: .omitted)
+        let timeString = game.eventDate.formatted(date: .omitted, time: .shortened)
         timeAndPlaceLabel.text = "\(dateString) \(game.stadiumName) \(timeString)".uppercased()
 
         // mandatory data
@@ -109,13 +109,6 @@ final class GameSummaryView: ContainerView {
         // visitor data
         visitorInitialsLabel.text = game.visitorTeam.initials
         visitorScoreLabel.text = String(game.visitorTeamGoals)
-        Nuke.loadImage(with: game.visitorTeam.brandUrl, into: visitorBrandImageView) { result in
-            switch result {
-            case let .failure(err):
-                print(err)
-            case let .success(image):
-                print(image)
-            }
-        }
+        Nuke.loadImage(with: game.visitorTeam.brandUrl, into: visitorBrandImageView)
     }
 }

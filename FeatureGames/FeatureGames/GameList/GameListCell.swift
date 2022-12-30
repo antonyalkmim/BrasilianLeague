@@ -37,6 +37,9 @@ final class GameListCell: UITableViewCell {
     // MARK: - Configuration
 
     private func configure() {
+
+        accessoryType = .disclosureIndicator
+
         addSubview(gameSummaryView)
         gameSummaryView.edgesToSuperview()
     }

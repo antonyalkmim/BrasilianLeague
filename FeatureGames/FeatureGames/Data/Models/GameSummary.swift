@@ -14,6 +14,6 @@ struct GameSummary {
     let mandatoryTeamGoals: Int
     let visitorTeamGoals: Int
 
-    let eventTime: Date
+    let eventDate: Date
     let stadiumName: String
 }

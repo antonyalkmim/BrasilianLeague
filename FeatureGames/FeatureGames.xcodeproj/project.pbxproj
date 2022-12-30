@@ -10,6 +10,11 @@
 		733198C9295E36B400336E61 /* GameSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733198C8295E36B400336E61 /* GameSummary.swift */; };
 		733198CC295E37E500336E61 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733198CB295E37E500336E61 /* Team.swift */; };
 		733198CF295E3D6C00336E61 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 733198CE295E3D6C00336E61 /* Nuke */; };
+		73319AE1295F1EF100336E61 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 73319AE0295F1EF100336E61 /* SnapshotTesting */; };
+		73319AE4295F1F2400336E61 /* GameSummaryViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73319AE3295F1F2400336E61 /* GameSummaryViewTests.swift */; };
+		73319CCC295F202D00336E61 /* UIView+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73319CCB295F202D00336E61 /* UIView+ext.swift */; };
+		73319CD0295F22F800336E61 /* GameSummary+Stubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73319CCF295F22F800336E61 /* GameSummary+Stubs.swift */; };
+		73319CD2295F256100336E61 /* Date+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73319CD1295F256100336E61 /* Date+ext.swift */; };
 		739ED004295DDDA400B79A27 /* FeatureGames.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 739ECFFB295DDDA300B79A27 /* FeatureGames.framework */; };
 		739ED009295DDDA400B79A27 /* FeatureGamesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739ED008295DDDA400B79A27 /* FeatureGamesTests.swift */; };
 		739ED00A295DDDA400B79A27 /* FeatureGames.h in Headers */ = {isa = PBXBuildFile; fileRef = 739ECFFE295DDDA300B79A27 /* FeatureGames.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -51,6 +56,10 @@
 /* Begin PBXFileReference section */
 		733198C8295E36B400336E61 /* GameSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSummary.swift; sourceTree = "<group>"; };
 		733198CB295E37E500336E61 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		73319AE3295F1F2400336E61 /* GameSummaryViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSummaryViewTests.swift; sourceTree = "<group>"; };
+		73319CCB295F202D00336E61 /* UIView+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ext.swift"; sourceTree = "<group>"; };
+		73319CCF295F22F800336E61 /* GameSummary+Stubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameSummary+Stubs.swift"; sourceTree = "<group>"; };
+		73319CD1295F256100336E61 /* Date+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+ext.swift"; sourceTree = "<group>"; };
 		739ECFFB295DDDA300B79A27 /* FeatureGames.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FeatureGames.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		739ECFFE295DDDA300B79A27 /* FeatureGames.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeatureGames.h; sourceTree = "<group>"; };
 		739ED003295DDDA400B79A27 /* FeatureGamesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeatureGamesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +89,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				739ED004295DDDA400B79A27 /* FeatureGames.framework in Frameworks */,
+				73319AE1295F1EF100336E61 /* SnapshotTesting in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +111,24 @@
 				733198CB295E37E500336E61 /* Team.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		73319CCA295F202200336E61 /* TestSupport */ = {
+			isa = PBXGroup;
+			children = (
+				73319CCE295F22EB00336E61 /* Stubs */,
+				73319CCB295F202D00336E61 /* UIView+ext.swift */,
+				73319CD1295F256100336E61 /* Date+ext.swift */,
+			);
+			path = TestSupport;
+			sourceTree = "<group>";
+		};
+		73319CCE295F22EB00336E61 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				73319CCF295F22F800336E61 /* GameSummary+Stubs.swift */,
+			);
+			path = Stubs;
 			sourceTree = "<group>";
 		};
 		739ECFF1295DDDA300B79A27 = {
@@ -137,7 +165,9 @@
 		739ED007295DDDA400B79A27 /* FeatureGamesTests */ = {
 			isa = PBXGroup;
 			children = (
+				73319CCA295F202200336E61 /* TestSupport */,
 				739ED008295DDDA400B79A27 /* FeatureGamesTests.swift */,
+				73319AE3295F1F2400336E61 /* GameSummaryViewTests.swift */,
 			);
 			path = FeatureGamesTests;
 			sourceTree = "<group>";
@@ -221,6 +251,9 @@
 				739ED006295DDDA400B79A27 /* PBXTargetDependency */,
 			);
 			name = FeatureGamesTests;
+			packageProductDependencies = (
+				73319AE0295F1EF100336E61 /* SnapshotTesting */,
+			);
 			productName = FeatureGamesTests;
 			productReference = 739ED003295DDDA400B79A27 /* FeatureGamesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -256,6 +289,7 @@
 			packageReferences = (
 				739ED233295E136300B79A27 /* XCRemoteSwiftPackageReference "TinyConstraints" */,
 				733198CD295E3D6C00336E61 /* XCRemoteSwiftPackageReference "Nuke" */,
+				73319ADF295F1EF100336E61 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
 			);
 			productRefGroup = 739ECFFC295DDDA300B79A27 /* Products */;
 			projectDirPath = "";
@@ -326,7 +360,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73319CCC295F202D00336E61 /* UIView+ext.swift in Sources */,
 				739ED009295DDDA400B79A27 /* FeatureGamesTests.swift in Sources */,
+				73319CD0295F22F800336E61 /* GameSummary+Stubs.swift in Sources */,
+				73319AE4295F1F2400336E61 /* GameSummaryViewTests.swift in Sources */,
+				73319CD2295F256100336E61 /* Date+ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -595,6 +633,14 @@
 				minimumVersion = 9.0.0;
 			};
 		};
+		73319ADF295F1EF100336E61 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-snapshot-testing";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		739ED233295E136300B79A27 /* XCRemoteSwiftPackageReference "TinyConstraints" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/roberthein/TinyConstraints.git";
@@ -610,6 +656,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 733198CD295E3D6C00336E61 /* XCRemoteSwiftPackageReference "Nuke" */;
 			productName = Nuke;
+		};
+		73319AE0295F1EF100336E61 /* SnapshotTesting */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 73319ADF295F1EF100336E61 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+			productName = SnapshotTesting;
 		};
 		739ED234295E136300B79A27 /* TinyConstraints */ = {
 			isa = XCSwiftPackageProductDependency;
