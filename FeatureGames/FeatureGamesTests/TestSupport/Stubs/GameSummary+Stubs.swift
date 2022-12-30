@@ -12,19 +12,21 @@ import Foundation
 
 extension GameSummary {
     static func stub(
+        id: String = "",
         mandatoryTeam: Team = .stub(),
         visitorTeam: Team = .stub(),
         mandatoryTeamGoals: Int = 0,
         visitorTeamGoals: Int = 0,
-        eventTime: Date = .now,
+        eventDate: Date = .now,
         stadiumName: String = "MARACANÃ"
     ) -> GameSummary {
         GameSummary(
+            id: id,
             mandatoryTeam: mandatoryTeam,
             visitorTeam: visitorTeam,
             mandatoryTeamGoals: mandatoryTeamGoals,
             visitorTeamGoals: visitorTeamGoals,
-            eventDate: eventTime,
+            eventDate: eventDate,
             stadiumName: stadiumName
         )
     }

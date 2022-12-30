@@ -17,7 +17,7 @@ class GameSummaryViewTests: XCTestCase {
         let gameSummary = GameSummary.stub(
             visitorTeam: .stub(initials: "GOI"),
             visitorTeamGoals: 2,
-            eventTime: Date(day: 30, month: 12, year: 2022) ?? .now
+            eventDate: Date(day: 30, month: 12, year: 2022) ?? .now
         )
 
         // when

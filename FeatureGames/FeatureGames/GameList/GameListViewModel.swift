@@ -13,7 +13,7 @@ struct GameListViewModel {
     private let service: GamesService
 
     init(
-        coordinator: GamesCoordinator,
+        coordinator: GamesCoordinator? = nil,
         service: GamesService = .live()
     ) {
         self.coordinator = coordinator

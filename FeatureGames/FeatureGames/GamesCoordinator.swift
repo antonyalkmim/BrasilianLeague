@@ -16,7 +16,7 @@ public enum GamesRoute: Route {
 
 public enum GamesResult: CoordinatorResult { }
 
-public final class GamesCoordinator: Coordinator<GamesRoute, GamesResult> {
+public class GamesCoordinator: Coordinator<GamesRoute, GamesResult> {
 
     let navigation = NavigationController()
 
@@ -24,7 +24,7 @@ public final class GamesCoordinator: Coordinator<GamesRoute, GamesResult> {
         super.init(rootViewController: navigation, didFinish)
     }
 
-    override public func navigate(to route: GamesRoute) {
+    override open func navigate(to route: GamesRoute) {
         switch route {
         case .list:
             let viewModel = GameListViewModel(coordinator: self)
