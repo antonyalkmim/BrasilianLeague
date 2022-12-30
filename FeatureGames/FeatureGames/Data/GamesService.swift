@@ -14,7 +14,7 @@ struct GamesService {
 
 extension GamesService {
     static func live(
-        apiService: HttpService = .init()
+        apiService: HttpService = Current.apiClient()
     ) -> GamesService {
         GamesService(
             listGames: { try await apiService.request(Endpoint(path: "/games")) }

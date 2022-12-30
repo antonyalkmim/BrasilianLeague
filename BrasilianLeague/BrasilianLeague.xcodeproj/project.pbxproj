@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		73319AD8295E42D500336E61 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 73319AD7295E42D500336E61 /* Nuke */; };
+		73319D41295F88E500336E61 /* AppDelegate+World.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73319D40295F88E500336E61 /* AppDelegate+World.swift */; };
 		739ECF6E295DDC5000B79A27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739ECF6D295DDC5000B79A27 /* AppDelegate.swift */; };
 		739ECF70295DDC5000B79A27 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739ECF6F295DDC5000B79A27 /* SceneDelegate.swift */; };
 		739ECF72295DDC5000B79A27 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739ECF71295DDC5000B79A27 /* ViewController.swift */; };
@@ -56,6 +57,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		73319D40295F88E500336E61 /* AppDelegate+World.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+World.swift"; sourceTree = "<group>"; };
 		739ECF6A295DDC5000B79A27 /* BrasilianLeague.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrasilianLeague.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		739ECF6D295DDC5000B79A27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		739ECF6F295DDC5000B79A27 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 				739ECF76295DDC5200B79A27 /* Assets.xcassets */,
 				739ECF78295DDC5200B79A27 /* LaunchScreen.storyboard */,
 				739ECF7B295DDC5200B79A27 /* Info.plist */,
+				73319D40295F88E500336E61 /* AppDelegate+World.swift */,
 			);
 			path = BrasilianLeague;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				739ECF72295DDC5000B79A27 /* ViewController.swift in Sources */,
 				739ECF6E295DDC5000B79A27 /* AppDelegate.swift in Sources */,
 				739ECF70295DDC5000B79A27 /* SceneDelegate.swift in Sources */,
+				73319D41295F88E500336E61 /* AppDelegate+World.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

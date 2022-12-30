@@ -14,6 +14,7 @@
 		73319D31295F661D00336E61 /* Data+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73319D30295F661D00336E61 /* Data+Ext.swift */; };
 		73319D33295F668900336E61 /* DateFormatter+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73319D32295F668900336E61 /* DateFormatter+Ext.swift */; };
 		73319D35295F6A7500336E61 /* Encodable+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73319D34295F6A7500336E61 /* Encodable+ext.swift */; };
+		73319D3F295F886800336E61 /* World.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73319D3E295F886800336E61 /* World.swift */; };
 		739ECFD2295DDCD400B79A27 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 739ECFC9295DDCD400B79A27 /* Core.framework */; };
 		739ECFD7295DDCD400B79A27 /* CoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739ECFD6295DDCD400B79A27 /* CoreTests.swift */; };
 		739ECFD8295DDCD400B79A27 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 739ECFCC295DDCD400B79A27 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -46,6 +47,7 @@
 		73319D30295F661D00336E61 /* Data+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Ext.swift"; sourceTree = "<group>"; };
 		73319D32295F668900336E61 /* DateFormatter+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Ext.swift"; sourceTree = "<group>"; };
 		73319D34295F6A7500336E61 /* Encodable+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encodable+ext.swift"; sourceTree = "<group>"; };
+		73319D3E295F886800336E61 /* World.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = World.swift; sourceTree = "<group>"; };
 		739ECFC9295DDCD400B79A27 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		739ECFCC295DDCD400B79A27 /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		739ECFD1295DDCD400B79A27 /* CoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +92,14 @@
 			path = HttpService;
 			sourceTree = "<group>";
 		};
+		73319D3D295F884F00336E61 /* World */ = {
+			isa = PBXGroup;
+			children = (
+				73319D3E295F886800336E61 /* World.swift */,
+			);
+			path = World;
+			sourceTree = "<group>";
+		};
 		739ECFBF295DDCD400B79A27 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +121,7 @@
 		739ECFCB295DDCD400B79A27 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				73319D3D295F884F00336E61 /* World */,
 				73319D29295F5FAD00336E61 /* HttpService */,
 				73F59DC1295E2E360072985B /* Styles */,
 				73F59DBB295E264B0072985B /* Extensions */,
@@ -330,6 +341,7 @@
 				73319D33295F668900336E61 /* DateFormatter+Ext.swift in Sources */,
 				73319D2F295F64FE00336E61 /* NetworkError.swift in Sources */,
 				739ED224295E099F00B79A27 /* Controller.swift in Sources */,
+				73319D3F295F886800336E61 /* World.swift in Sources */,
 				73319D28295F5FA900336E61 /* HttpService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
