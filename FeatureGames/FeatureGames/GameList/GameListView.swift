@@ -21,10 +21,7 @@ final class GameListView: ContainerView {
         $0.dataSource = self
         $0.delegate = self
         $0.separatorInset = .zero
-        $0.refreshControl = refreshControl
     }
-
-    lazy var refreshControl = UIRefreshControl()
 
     // MARK: - Initializer
 
@@ -47,7 +44,6 @@ final class GameListView: ContainerView {
 
     func setItems(_ items: [GameSummary]) {
         self.items = items
-        refreshControl.endRefreshing()
         tableView.reloadData()
     }
 }

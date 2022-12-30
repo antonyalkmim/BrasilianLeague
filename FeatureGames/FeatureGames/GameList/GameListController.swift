@@ -11,6 +11,8 @@ import UIKit
 final class GameListController: Controller {
 
     private let viewModel: GameListViewModel
+
+    private lazy var refreshControl = UIRefreshControl()
     private lazy var rootView = GameListView(
         onSelectGame: weakify { $0.viewModel.selectGame($1) }
     )
@@ -23,7 +25,7 @@ final class GameListController: Controller {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupActions()
-        navigationItem.title = L10n.List.title
+        setupNavigationBar()
         loadGames()
     }
 
@@ -34,19 +36,26 @@ final class GameListController: Controller {
 
     override func loadView() {
         view = rootView
+        rootView.tableView.refreshControl = refreshControl
+    }
+
+    private func setupNavigationBar() {
+        navigationItem.title = L10n.List.title
+        navigationItem.largeTitleDisplayMode = .never
     }
 
     private func setupActions() {
-        rootView.refreshControl.addTarget(self, action: #selector(refreshAction), for: .valueChanged)
+        refreshControl.addTarget(self, action: #selector(refreshAction), for: .valueChanged)
     }
 
     private func loadGames() {
-        rootView.refreshControl.beginRefreshing()
+        refreshControl.beginRefreshing()
 
         Task(priority: .userInitiated) {
             do {
                 let games = try await viewModel.getGames()
                 rootView.setItems(games)
+                refreshControl.endRefreshing()
             } catch {
                 print(error)
             }
