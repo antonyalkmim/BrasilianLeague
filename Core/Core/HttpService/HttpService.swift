@@ -24,7 +24,7 @@ public struct Endpoint {
         path: String,
         method: HttpMethod = .get,
         body: Encodable? = nil,
-        headers: [String : String] = [:]
+        headers: [String: String] = [:]
     ) {
         self.baseURL = baseURL
         self.path = path
