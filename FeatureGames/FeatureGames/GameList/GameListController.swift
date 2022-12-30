@@ -20,12 +20,28 @@ final class GameListController: Controller {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupActions()
         navigationItem.title = "Jogos"
         rootView.setItems(viewModel.getGames())
     }
 
     override func loadView() {
         view = rootView
+    }
+
+    private func setupActions() {
+        rootView.refreshControl.addTarget(self, action: #selector(refreshAction), for: .valueChanged)
+    }
+
+    @objc
+    private func refreshAction() {
+        Timer.scheduledTimer(
+            withTimeInterval: 2,
+            repeats: false,
+            block: weakify { weakSelf, _ in
+                weakSelf.rootView.setItems(weakSelf.viewModel.getGames())
+            }
+        )
     }
 
 }
