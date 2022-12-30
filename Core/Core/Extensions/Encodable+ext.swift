@@ -8,7 +8,7 @@
 import Foundation
 
 public extension Encodable {
-    public func encodeToAPI(
+    func encodeToAPI(
         keyEncodingStrategy: JSONEncoder.KeyEncodingStrategy = .convertToSnakeCase
     ) -> Data {
         let encoder = JSONEncoder()

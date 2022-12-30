@@ -11,7 +11,6 @@
 		73319D41295F88E500336E61 /* AppDelegate+World.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73319D40295F88E500336E61 /* AppDelegate+World.swift */; };
 		739ECF6E295DDC5000B79A27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739ECF6D295DDC5000B79A27 /* AppDelegate.swift */; };
 		739ECF70295DDC5000B79A27 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739ECF6F295DDC5000B79A27 /* SceneDelegate.swift */; };
-		739ECF72295DDC5000B79A27 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739ECF71295DDC5000B79A27 /* ViewController.swift */; };
 		739ECF77295DDC5200B79A27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 739ECF76295DDC5200B79A27 /* Assets.xcassets */; };
 		739ECF7A295DDC5200B79A27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 739ECF78295DDC5200B79A27 /* LaunchScreen.storyboard */; };
 		739ECF85295DDC5200B79A27 /* BrasilianLeagueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739ECF84295DDC5200B79A27 /* BrasilianLeagueTests.swift */; };
@@ -61,7 +60,6 @@
 		739ECF6A295DDC5000B79A27 /* BrasilianLeague.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrasilianLeague.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		739ECF6D295DDC5000B79A27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		739ECF6F295DDC5000B79A27 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		739ECF71295DDC5000B79A27 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		739ECF76295DDC5200B79A27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		739ECF79295DDC5200B79A27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		739ECF7B295DDC5200B79A27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -103,6 +101,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		73319D45295F901C00336E61 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				739ECF76295DDC5200B79A27 /* Assets.xcassets */,
+				739ECF78295DDC5200B79A27 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		739ECF61295DDC5000B79A27 = {
 			isa = PBXGroup;
 			children = (
@@ -127,12 +134,10 @@
 		739ECF6C295DDC5000B79A27 /* BrasilianLeague */ = {
 			isa = PBXGroup;
 			children = (
+				739ECF7B295DDC5200B79A27 /* Info.plist */,
+				73319D45295F901C00336E61 /* Resources */,
 				739ECF6D295DDC5000B79A27 /* AppDelegate.swift */,
 				739ECF6F295DDC5000B79A27 /* SceneDelegate.swift */,
-				739ECF71295DDC5000B79A27 /* ViewController.swift */,
-				739ECF76295DDC5200B79A27 /* Assets.xcassets */,
-				739ECF78295DDC5200B79A27 /* LaunchScreen.storyboard */,
-				739ECF7B295DDC5200B79A27 /* Info.plist */,
 				73319D40295F88E500336E61 /* AppDelegate+World.swift */,
 			);
 			path = BrasilianLeague;
@@ -326,7 +331,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				739ECF72295DDC5000B79A27 /* ViewController.swift in Sources */,
 				739ECF6E295DDC5000B79A27 /* AppDelegate.swift in Sources */,
 				739ECF70295DDC5000B79A27 /* SceneDelegate.swift in Sources */,
 				73319D41295F88E500336E61 /* AppDelegate+World.swift in Sources */,
