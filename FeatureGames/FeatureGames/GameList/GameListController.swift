@@ -21,7 +21,7 @@ final class GameListController: Controller {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupActions()
-        navigationItem.title = "Jogos"
+        navigationItem.title = L10n.List.title
         rootView.setItems(viewModel.getGames())
     }
 

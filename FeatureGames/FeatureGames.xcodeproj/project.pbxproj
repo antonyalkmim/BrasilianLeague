@@ -15,6 +15,10 @@
 		73319CCC295F202D00336E61 /* UIView+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73319CCB295F202D00336E61 /* UIView+ext.swift */; };
 		73319CD0295F22F800336E61 /* GameSummary+Stubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73319CCF295F22F800336E61 /* GameSummary+Stubs.swift */; };
 		73319CD2295F256100336E61 /* Date+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73319CD1295F256100336E61 /* Date+ext.swift */; };
+		73319CD9295F2CAC00336E61 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 73319CD8295F2CAC00336E61 /* Localizable.strings */; };
+		73319CDB295F2CC800336E61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73319CDA295F2CC800336E61 /* Assets.xcassets */; };
+		73319D24295F2ED800336E61 /* Assets.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73319D22295F2ED800336E61 /* Assets.generated.swift */; };
+		73319D25295F2ED800336E61 /* Strings.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73319D23295F2ED800336E61 /* Strings.generated.swift */; };
 		739ED004295DDDA400B79A27 /* FeatureGames.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 739ECFFB295DDDA300B79A27 /* FeatureGames.framework */; };
 		739ED009295DDDA400B79A27 /* FeatureGamesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739ED008295DDDA400B79A27 /* FeatureGamesTests.swift */; };
 		739ED00A295DDDA400B79A27 /* FeatureGames.h in Headers */ = {isa = PBXBuildFile; fileRef = 739ECFFE295DDDA300B79A27 /* FeatureGames.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -60,6 +64,10 @@
 		73319CCB295F202D00336E61 /* UIView+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+ext.swift"; sourceTree = "<group>"; };
 		73319CCF295F22F800336E61 /* GameSummary+Stubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameSummary+Stubs.swift"; sourceTree = "<group>"; };
 		73319CD1295F256100336E61 /* Date+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+ext.swift"; sourceTree = "<group>"; };
+		73319CD8295F2CAC00336E61 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		73319CDA295F2CC800336E61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		73319D22295F2ED800336E61 /* Assets.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.generated.swift; sourceTree = "<group>"; };
+		73319D23295F2ED800336E61 /* Strings.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.generated.swift; sourceTree = "<group>"; };
 		739ECFFB295DDDA300B79A27 /* FeatureGames.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FeatureGames.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		739ECFFE295DDDA300B79A27 /* FeatureGames.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeatureGames.h; sourceTree = "<group>"; };
 		739ED003295DDDA400B79A27 /* FeatureGamesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FeatureGamesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -131,6 +139,25 @@
 			path = Stubs;
 			sourceTree = "<group>";
 		};
+		73319CD6295F2C9900336E61 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				73319CD7295F2C9E00336E61 /* Generated */,
+				73319CD8295F2CAC00336E61 /* Localizable.strings */,
+				73319CDA295F2CC800336E61 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		73319CD7295F2C9E00336E61 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				73319D22295F2ED800336E61 /* Assets.generated.swift */,
+				73319D23295F2ED800336E61 /* Strings.generated.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
 		739ECFF1295DDDA300B79A27 = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +180,7 @@
 		739ECFFD295DDDA300B79A27 /* FeatureGames */ = {
 			isa = PBXGroup;
 			children = (
+				73319CD6295F2C9900336E61 /* Resources */,
 				733198C7295E369D00336E61 /* Data */,
 				73F59DC0295E2C530072985B /* Shared */,
 				739ED21F295E095F00B79A27 /* GameList */,
@@ -217,6 +245,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 739ED00D295DDDA400B79A27 /* Build configuration list for PBXNativeTarget "FeatureGames" */;
 			buildPhases = (
+				73319CDC295F2D5800336E61 /* SwiftGen */,
 				739ECFF6295DDDA300B79A27 /* Headers */,
 				739ECFF7295DDDA300B79A27 /* Sources */,
 				739ECFF8295DDDA300B79A27 /* Frameworks */,
@@ -306,6 +335,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73319CDB295F2CC800336E61 /* Assets.xcassets in Resources */,
+				73319CD9295F2CAC00336E61 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +350,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		73319CDC295F2D5800336E61 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "`readlink $HOME/.mint/bin/swiftgen`\n";
+		};
 		739ED01F295DE2C100B79A27 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
@@ -347,10 +396,12 @@
 			files = (
 				739ED025295DE4DE00B79A27 /* GamesCoordinator.swift in Sources */,
 				739ED221295E097400B79A27 /* GameListController.swift in Sources */,
+				73319D24295F2ED800336E61 /* Assets.generated.swift in Sources */,
 				739ED228295E0BC500B79A27 /* GameListView.swift in Sources */,
 				739ED226295E0A7500B79A27 /* GameListViewModel.swift in Sources */,
 				733198CC295E37E500336E61 /* Team.swift in Sources */,
 				73F59DBA295E24150072985B /* GameListCell.swift in Sources */,
+				73319D25295F2ED800336E61 /* Strings.generated.swift in Sources */,
 				733198C9295E36B400336E61 /* GameSummary.swift in Sources */,
 				73F59DBF295E2C4B0072985B /* GameSumaryView.swift in Sources */,
 			);

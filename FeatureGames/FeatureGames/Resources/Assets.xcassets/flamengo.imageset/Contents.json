@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "flamengo_60x60.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
