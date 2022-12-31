@@ -11,7 +11,8 @@ import Foundation
 extension GamesService {
     static func mock() -> GamesService {
         GamesService(
-            listGames: { fatalError("method should be overriden") }
+            listGames: { fatalError() },
+            getGameDetails: { _ in fatalError()}
         )
     }
 }

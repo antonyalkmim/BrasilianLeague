@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import Core
 
-public enum GamesRoute: Route {
+public enum GamesRoute: Route, Equatable {
     case list
     case details(GameSummary)
 }

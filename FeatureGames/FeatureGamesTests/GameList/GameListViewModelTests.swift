@@ -59,14 +59,15 @@ class GameListViewModelTests: XCTestCase {
     }
 
     func test_selectGame_shouldTriggerDetailsRoute() {
+        let summary = GameSummary.stub()
         let coordinatorSpy = GameCoordinatorSpy()
         let sut = GameListViewModel(coordinator: coordinatorSpy)
 
         // when
-        sut.selectGame(.stub())
+        sut.selectGame(summary)
 
         // then
-        XCTAssertEqual(coordinatorSpy.triggeredRoute, .details)
+        XCTAssertEqual(coordinatorSpy.triggeredRoute, .details(summary))
 
     }
 

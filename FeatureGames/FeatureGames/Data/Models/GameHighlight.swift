@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Game: Decodable {
+struct Game: Decodable, Equatable {
     let id: String
 
     let title: String
@@ -16,7 +16,7 @@ struct Game: Decodable {
     let highlights: [GameHighlight]
 }
 
-struct GameHighlight: Decodable {
+struct GameHighlight: Decodable, Equatable {
     let description: String
     let eventMinute: Int
     let type: EventType
