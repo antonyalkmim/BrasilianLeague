@@ -22,6 +22,8 @@ final class GameDetailsView: ContainerView {
     private(set) var loadingView = UIActivityIndicatorView(style: .large)
     lazy var tableView = UITableView() .. {
         $0.dataSource = self
+        $0.separatorStyle = .none
+        $0.register(GameDetailDescriptionCell.self)
     }
 
     // MARK: - View Setup
@@ -82,13 +84,31 @@ final class GameDetailsView: ContainerView {
 // MARK: - UITableViewDataSource
 extension GameDetailsView: UITableViewDataSource {
 
+    func numberOfSections(in tableView: UITableView) -> Int {
+        game != nil ? 2 : 0 // description + highlights
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        guard let game = game else { return 0 }
+
+        switch section {
+        case 0: return 1
+        default: return game.highlights.count
+        }
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        UITableViewCell() .. {
-            $0.textLabel?.text = "Algo"
+        guard let game = game else { return UITableViewCell() }
+
+        switch indexPath.section {
+        case 0:
+            return tableView.dequeueReusableCell(type: GameDetailDescriptionCell.self, indexPath: indexPath) .. {
+                $0.bind(game: game)
+            }
+
+        default:
+            return UITableViewCell()
         }
+
     }
 }
