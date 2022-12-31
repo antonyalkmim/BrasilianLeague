@@ -10,6 +10,7 @@ import Foundation
 
 struct GamesService {
     var listGames: () async throws -> [GameSummary]
+    var getGameDetails: (_ id: String) async throws -> Game
 }
 
 extension GamesService {
@@ -17,7 +18,8 @@ extension GamesService {
         apiService: HttpService = Current.apiClient()
     ) -> GamesService {
         GamesService(
-            listGames: { try await apiService.request(Endpoint(path: "/games")) }
+            listGames: { try await apiService.request(Endpoint(path: "/games")) },
+            getGameDetails: { try await apiService.request(Endpoint(path: "/games/\($0)")) }
         )
     }
 }

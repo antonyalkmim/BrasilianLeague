@@ -12,7 +12,7 @@ import Foundation
 internal enum L10n {
 
   internal enum List {
-    /// Jogos
+    /// Última rodada
     internal static let title = L10n.tr("Localizable", "List.title")
     internal enum Error {
       internal enum Empty {

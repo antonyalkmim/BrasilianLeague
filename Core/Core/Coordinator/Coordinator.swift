@@ -38,6 +38,7 @@ open class Coordinator<RouteType: Route, ResultType: CoordinatorResult>: UIViewC
         addChild(controller)
         view.addSubview(controller.view)
         controller.view.edgesToSuperview(priority: .required)
+        controller.view.backgroundColor = .systemBackground
         controller.didMove(toParent: self)
     }
 

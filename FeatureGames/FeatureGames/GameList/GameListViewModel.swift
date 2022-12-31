@@ -30,7 +30,7 @@ struct GameListViewModel {
     }
 
     func selectGame(_ game: GameSummary) {
-        coordinator?.navigate(to: .details)
+        coordinator?.navigate(to: .details(game))
     }
 
     enum State {

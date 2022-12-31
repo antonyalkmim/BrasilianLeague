@@ -28,9 +28,9 @@ open class NavigationController: UINavigationController {
 
     private func setup() {
         navigationBar.prefersLargeTitles = true
-        navigationBar.isTranslucent = true
+        navigationBar.isTranslucent = false
         navigationBar.barStyle = .default
-        navigationBar.tintColor = .white
+        navigationBar.barTintColor = .systemGroupedBackground
 
         let navBarAppearance = UINavigationBarAppearance()
         navigationBar.compactAppearance = navBarAppearance

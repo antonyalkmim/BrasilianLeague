@@ -24,8 +24,8 @@ final class GameListController: Controller {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = L10n.List.title
         setupActions()
-        setupNavigationBar()
         loadGames()
     }
 
@@ -37,11 +37,6 @@ final class GameListController: Controller {
     override func loadView() {
         view = rootView
         rootView.tableView.refreshControl = refreshControl
-    }
-
-    private func setupNavigationBar() {
-        navigationItem.title = L10n.List.title
-        navigationItem.largeTitleDisplayMode = .never
     }
 
     private func setupActions() {

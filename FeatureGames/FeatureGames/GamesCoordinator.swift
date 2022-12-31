@@ -11,7 +11,7 @@ import Core
 
 public enum GamesRoute: Route {
     case list
-    case details
+    case details(GameSummary)
 }
 
 public enum GamesResult: CoordinatorResult { }
@@ -31,9 +31,9 @@ public class GamesCoordinator: Coordinator<GamesRoute, GamesResult> {
             let controller = GameListController(viewModel: viewModel)
             navigation.setViewControllers([controller], animated: true)
 
-        case .details:
-            let controller = UIViewController()
-            controller.view.backgroundColor = .blue
+        case let .details(summary):
+            let viewModel = GameDetailsViewModel(gameSummary: summary)
+            let controller = GameDetailsController(viewModel: viewModel)
             navigation.pushViewController(controller, animated: true)
         }
     }

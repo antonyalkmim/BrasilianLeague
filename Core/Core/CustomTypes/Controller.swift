@@ -15,6 +15,7 @@ open class Controller: UIViewController {
         super.init(nibName: nil, bundle: nil)
         modalPresentationStyle = .fullScreen
         navigationItem.largeTitleDisplayMode = .automatic
+        edgesForExtendedLayout = []
     }
 
     override public init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
