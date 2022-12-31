@@ -1,0 +1,5 @@
+strings:
+  inputs: Core/Resources/Localizable.strings
+  outputs:
+    - templateName: structured-swift5
+      output: Core/Resources/Generated/Strings.generated.swift

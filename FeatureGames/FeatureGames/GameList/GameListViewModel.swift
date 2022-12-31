@@ -20,11 +20,22 @@ struct GameListViewModel {
         self.service = service
     }
 
-    func getGames() async throws -> [GameSummary] {
-        try await service.listGames()
+    func getGames() async -> State {
+        do {
+            let items = try await service.listGames()
+            return items.isEmpty ? .empty : .loaded(items)
+        } catch {
+            return State.error(error)
+        }
     }
 
     func selectGame(_ game: GameSummary) {
         coordinator?.navigate(to: .details)
+    }
+
+    enum State {
+        case loaded([GameSummary])
+        case empty
+        case error(Error)
     }
 }

@@ -49,18 +49,12 @@ final class GameListController: Controller {
     }
 
     private func loadGames() {
-        refreshControl.beginRefreshing()
-
         Task(priority: .userInitiated) {
-            do {
-                let games = try await viewModel.getGames()
-                rootView.setItems(games)
-                refreshControl.endRefreshing()
-            } catch {
-                print(error)
-            }
+            refreshControl.beginRefreshing()
+            let state = await viewModel.getGames()
+            rootView.bind(state: state)
+            refreshControl.endRefreshing()
         }
-
     }
 
     @objc

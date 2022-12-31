@@ -15,4 +15,8 @@ public struct World {
     public init(apiClient: @escaping () -> HttpService) {
         self.apiClient = apiClient
     }
+
+    public static let mock = World(
+        apiClient: { HttpService() }
+    )
 }

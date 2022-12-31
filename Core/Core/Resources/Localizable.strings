@@ -1,0 +1,11 @@
+// MARK: - Error
+
+// MARK: - Network error
+
+"Error.Network.title" = "Sem conexão";
+"Error.Network.message" = "Oops! Perdemos conexão com a internet. Verifique o Wi-fi ou a sua rede móvel e tente novamente.";
+
+// MARK: - Generic error
+
+"Error.Generic.title" = "Algo de errado por aqui";
+"Error.Generic.message" = "Aconteceu um error e já estamos trabalhando para tudo voltar ao normal. Tente acessar novamente mais tarde!";

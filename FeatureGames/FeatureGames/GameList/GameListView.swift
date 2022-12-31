@@ -16,6 +16,10 @@ final class GameListView: ContainerView {
 
     // MARK: - Subviews
 
+    lazy var errorView = HeroView() .. {
+        $0.isHidden = true
+    }
+
     lazy var tableView = UITableView() .. {
         $0.register(GameListCell.self)
         $0.dataSource = self
@@ -34,18 +38,40 @@ final class GameListView: ContainerView {
 
     override func configureSubviews() {
         addSubview(tableView)
+        addSubview(errorView)
 
         backgroundColor = .systemBackground
     }
 
     override func configureConstraints() {
         tableView.edgesToSuperview()
+        errorView.edgesToSuperview()
     }
 
-    func setItems(_ items: [GameSummary]) {
-        self.items = items
+    func bind(state: GameListViewModel.State) {
+        switch state {
+        case let .loaded(games): showGames(games)
+        case .empty: showEmptyState()
+        case let .error(error): errorView.showError(error)
+        }
+    }
+
+    func showGames(_ games: [GameSummary]) {
+        // reset state
+        errorView.isHidden = false
+
+        // reload data
+        self.items = games
         tableView.reloadData()
     }
+
+    func showEmptyState() {
+        errorView.isHidden = false
+        errorView.imageView.image = UIImage(systemName: "doc")
+        errorView.titleLabel.text = L10n.List.Error.Empty.title
+        errorView.messageLabel.text = L10n.List.Error.Empty.message
+    }
+
 }
 
 // MARK: - UITableViewDataSource

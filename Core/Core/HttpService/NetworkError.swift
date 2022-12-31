@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum NetworkError: LocalizedError {
+public enum NetworkError: LocalizedError {
     case unknow(Error?)
     case jsonMapping(Error?)
     case connectionError

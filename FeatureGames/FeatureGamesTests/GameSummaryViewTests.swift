@@ -5,9 +5,10 @@
 //  Created by antony.alkmim on 30/12/22.
 //
 
-import SnapshotTesting
-import XCTest
 @testable import FeatureGames
+import SnapshotTesting
+import TestSupport
+import XCTest
 
 class GameSummaryViewTests: XCTestCase {
 

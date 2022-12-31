@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Team: Decodable {
+struct Team: Decodable, Equatable {
     let name: String
     let initials: String
     let brandUrl: URL

@@ -1,1 +1,6 @@
 "List.title" = "Jogos";
+
+// MARK: - EmptyState
+
+"List.Error.Empty.title" = "Nenhum jogo encontrado";
+"List.Error.Empty.message" = "Parece que ainda não aconteceu nenhuma partida nessa rodada. Aguarde para mais atualizações.";

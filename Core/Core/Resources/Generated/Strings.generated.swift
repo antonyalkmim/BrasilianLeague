@@ -11,16 +11,18 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
 
-  internal enum List {
-    /// Jogos
-    internal static let title = L10n.tr("Localizable", "List.title")
-    internal enum Error {
-      internal enum Empty {
-        /// Parece que ainda não aconteceu nenhuma partida nessa rodada. Aguarde para mais atualizações.
-        internal static let message = L10n.tr("Localizable", "List.Error.Empty.message")
-        /// Nenhum jogo encontrado
-        internal static let title = L10n.tr("Localizable", "List.Error.Empty.title")
-      }
+  internal enum Error {
+    internal enum Generic {
+      /// Aconteceu um error e já estamos trabalhando para tudo voltar ao normal. Tente acessar novamente mais tarde!
+      internal static let message = L10n.tr("Localizable", "Error.Generic.message")
+      /// Algo de errado por aqui
+      internal static let title = L10n.tr("Localizable", "Error.Generic.title")
+    }
+    internal enum Network {
+      /// Oops! Perdemos conexão com a internet. Verifique o Wi-fi ou a sua rede móvel e tente novamente.
+      internal static let message = L10n.tr("Localizable", "Error.Network.message")
+      /// Sem conexão
+      internal static let title = L10n.tr("Localizable", "Error.Network.title")
     }
   }
 }

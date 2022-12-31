@@ -5,8 +5,9 @@
 //  Created by antony.alkmim on 30/12/22.
 //
 
-import XCTest
+import Core
 @testable import FeatureGames
+import XCTest
 
 class GameListViewModelTests: XCTestCase {
 
@@ -22,11 +23,12 @@ class GameListViewModelTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
+        Current = .mock
         serviceMock = .mock()
         sut = GameListViewModel(service: serviceMock)
     }
 
-    func test_getGames_shouldReturnGames() async throws {
+    func test_getGames_shouldReturnLoadedState() async throws {
         // given
         let gameStub = GameSummary.stub(
             mandatoryTeam: .stub(name: "Flamengo", initials: "FLA", brandUrl: brandURL),
@@ -38,16 +40,22 @@ class GameListViewModelTests: XCTestCase {
         serviceMock.listGames = { [gameStub] }
 
         // when
-        let loadedGames = try await sut.getGames()
+        let state = await sut.getGames()
 
         // then
-        let game = try XCTUnwrap(loadedGames.first)
+        XCTAssertEqual(state, .loaded([gameStub]))
+    }
 
-        XCTAssertEqual(loadedGames.count, 1)
-        XCTAssertEqual(game.mandatoryTeam.initials, "FLA")
-        XCTAssertEqual(game.visitorTeam.initials, "FLU")
-        XCTAssertEqual(game.mandatoryTeamGoals, 1)
-        XCTAssertEqual(game.visitorTeamGoals, 0)
+    func test_givenEmptyList_whenGetGames_shouldReturnEmptyState() async {
+        serviceMock.listGames = { [] }
+        let state = await sut.getGames()
+        XCTAssertEqual(state, .empty)
+    }
+
+    func test_givenNetworkError_whenGetGames_shouldReturnErrorState() async {
+        serviceMock.listGames = { throw NetworkError.noInternetConnection }
+        let state = await sut.getGames()
+        XCTAssertEqual(state, .error(NetworkError.noInternetConnection))
     }
 
     func test_selectGame_shouldTriggerDetailsRoute() {
@@ -62,4 +70,20 @@ class GameListViewModelTests: XCTestCase {
 
     }
 
+}
+
+extension GameListViewModel.State: Equatable {
+    public static func == (
+        lhs: FeatureGames.GameListViewModel.State,
+        rhs: FeatureGames.GameListViewModel.State
+    ) -> Bool {
+        // swiftlint:disable identifier_name
+        switch (lhs, rhs) {
+        case let (.loaded(l), .loaded(r)): return l == r
+        case (.empty, .empty): return true
+        case let (.error(l), .error(r)): return l.localizedDescription == r.localizedDescription
+        default: return false
+        }
+        // swiftlint:enable identifier_name
+    }
 }

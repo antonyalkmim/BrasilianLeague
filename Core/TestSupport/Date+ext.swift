@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension Date {
+public extension Date {
     init?(
         day: Int,
         month: Int,
