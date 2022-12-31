@@ -17,7 +17,6 @@ struct Game: Decodable {
 }
 
 struct GameHighlight: Decodable {
-    let id: String
     let description: String
     let eventMinute: Int
     let type: EventType
