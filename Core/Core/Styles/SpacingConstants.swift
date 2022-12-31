@@ -9,6 +9,9 @@ import Foundation
 
 public extension CGFloat {
 
+    /// 4.0
+    static let xSmall: CGFloat = 4
+
     /// 8.0
     static let small: CGFloat = 8
 

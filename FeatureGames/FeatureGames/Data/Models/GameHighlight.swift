@@ -19,7 +19,7 @@ struct Game: Decodable {
 struct GameHighlight: Decodable {
     let id: String
     let description: String
-    let eventDate: Date
+    let eventMinute: Int
     let type: EventType
 
     enum EventType: String, Decodable {

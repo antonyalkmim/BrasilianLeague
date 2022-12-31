@@ -11,6 +11,9 @@ import UIKit
 
 final class GameDetailsView: ContainerView {
 
+    let kDescriptionSection = 0
+    let kHighlightsSection = 1
+
     private var game: Game?
 
     // MARK: - Subviews
@@ -24,6 +27,7 @@ final class GameDetailsView: ContainerView {
         $0.dataSource = self
         $0.separatorStyle = .none
         $0.register(GameDetailDescriptionCell.self)
+        $0.register(GameHighlightCell.self)
     }
 
     // MARK: - View Setup
@@ -92,7 +96,7 @@ extension GameDetailsView: UITableViewDataSource {
         guard let game = game else { return 0 }
 
         switch section {
-        case 0: return 1
+        case kDescriptionSection: return 1
         default: return game.highlights.count
         }
     }
@@ -101,14 +105,21 @@ extension GameDetailsView: UITableViewDataSource {
         guard let game = game else { return UITableViewCell() }
 
         switch indexPath.section {
-        case 0:
+        case kDescriptionSection:
             return tableView.dequeueReusableCell(type: GameDetailDescriptionCell.self, indexPath: indexPath) .. {
                 $0.bind(game: game)
             }
 
         default:
-            return UITableViewCell()
+            return tableView.dequeueReusableCell(type: GameHighlightCell.self, indexPath: indexPath) .. {
+                $0.bind(highlight: game.highlights[indexPath.row])
+            }
         }
 
     }
+
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        section == kHighlightsSection ? L10n.Details.Section.highlights : nil
+    }
+
 }

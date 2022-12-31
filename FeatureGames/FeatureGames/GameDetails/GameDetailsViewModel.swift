@@ -35,25 +35,25 @@ struct GameDetailsViewModel {
                 GameHighlight(
                     id: "1",
                     description: "Avaí tenta transição para o ataque, André recupera a bola, dribla dois marcadores, mas perde a bola perto da área do Avaí",
-                    eventDate: Date.now,
+                    eventMinute: 59,
                     type: .normal
                 ),
                 GameHighlight(
                     id: "1",
                     description: "Cartão para Robinho",
-                    eventDate: Date.now,
+                    eventMinute: 34,
                     type: .normal
                 ),
                 GameHighlight(
                     id: "1",
                     description: "Ronaldinho gaucho marcou o segundo do time catarinense",
-                    eventDate: Date.now,
+                    eventMinute: 21,
                     type: .goal
                 ),
                 GameHighlight(
                     id: "1",
                     description: "Lance perigoso",
-                    eventDate: Date.now,
+                    eventMinute: 7,
                     type: .normal
                 )
             ]

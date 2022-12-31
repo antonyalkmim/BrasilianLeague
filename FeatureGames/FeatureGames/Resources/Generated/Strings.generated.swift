@@ -11,6 +11,21 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
 
+  internal enum Details {
+    /// %@'
+    internal static func eventTime(_ p1: Any) -> String {
+      return L10n.tr("Localizable", "Details.eventTime", String(describing: p1))
+    }
+    /// %@' ⚽️
+    internal static func goalEventTime(_ p1: Any) -> String {
+      return L10n.tr("Localizable", "Details.goalEventTime", String(describing: p1))
+    }
+    internal enum Section {
+      /// Lances
+      internal static let highlights = L10n.tr("Localizable", "Details.Section.highlights")
+    }
+  }
+
   internal enum List {
     /// Última rodada
     internal static let title = L10n.tr("Localizable", "List.title")
