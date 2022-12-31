@@ -20,6 +20,10 @@ internal enum L10n {
     internal static func goalEventTime(_ p1: Any) -> String {
       return L10n.tr("Localizable", "Details.goalEventTime", String(describing: p1))
     }
+    internal enum Empty {
+      /// "Ainda não aconteceu nenhum lance importante no jogo!"
+      internal static let message = L10n.tr("Localizable", "Details.Empty.message")
+    }
     internal enum Section {
       /// Lances
       internal static let highlights = L10n.tr("Localizable", "Details.Section.highlights")

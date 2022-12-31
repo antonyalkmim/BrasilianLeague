@@ -11,3 +11,5 @@
 
 "Details.goalEventTime" = "%@' ⚽️";
 "Details.eventTime" = "%@'";
+
+"Details.Empty.message" = "\"Ainda não aconteceu nenhum lance importante no jogo!\"";

@@ -28,6 +28,7 @@ final class GameDetailsView: ContainerView {
         $0.separatorStyle = .none
         $0.register(GameDetailDescriptionCell.self)
         $0.register(GameHighlightCell.self)
+        $0.register(EmptyHighlightCell.self)
     }
 
     // MARK: - View Setup
@@ -56,7 +57,9 @@ final class GameDetailsView: ContainerView {
     func bind(state: GameDetailsViewModel.State) {
         switch state {
         case let .loaded(game): showGameDetails(game)
-        case let .error(error): errorView.showError(error)
+        case let .error(error):
+            showLoading(false)
+            errorView.showError(error)
         }
     }
 
@@ -89,7 +92,7 @@ final class GameDetailsView: ContainerView {
 extension GameDetailsView: UITableViewDataSource {
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        game != nil ? 2 : 0 // description + highlights
+        game != nil ? 3 : 0 // description + highlights
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -97,7 +100,8 @@ extension GameDetailsView: UITableViewDataSource {
 
         switch section {
         case kDescriptionSection: return 1
-        default: return game.highlights.count
+        case kHighlightsSection: return game.highlights.count
+        default: return game.highlights.isEmpty ? 1 : 0
         }
     }
 
@@ -110,10 +114,14 @@ extension GameDetailsView: UITableViewDataSource {
                 $0.bind(game: game)
             }
 
-        default:
+        case kHighlightsSection:
             return tableView.dequeueReusableCell(type: GameHighlightCell.self, indexPath: indexPath) .. {
                 $0.bind(highlight: game.highlights[indexPath.row])
             }
+
+        default:
+            return tableView.dequeueReusableCell(type: EmptyHighlightCell.self, indexPath: indexPath)
+
         }
 
     }
