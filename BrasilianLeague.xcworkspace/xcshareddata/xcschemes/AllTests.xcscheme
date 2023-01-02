@@ -71,6 +71,16 @@
                ReferencedContainer = "container:BrasilianLeague/BrasilianLeague.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "739ECF89295DDC5200B79A27"
+               BuildableName = "BrasilianLeagueUITests.xctest"
+               BlueprintName = "BrasilianLeagueUITests"
+               ReferencedContainer = "container:BrasilianLeague/BrasilianLeague.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

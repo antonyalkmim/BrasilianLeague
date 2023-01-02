@@ -15,7 +15,6 @@
 		739ECF7A295DDC5200B79A27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 739ECF78295DDC5200B79A27 /* LaunchScreen.storyboard */; };
 		739ECF85295DDC5200B79A27 /* BrasilianLeagueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739ECF84295DDC5200B79A27 /* BrasilianLeagueTests.swift */; };
 		739ECF8F295DDC5200B79A27 /* BrasilianLeagueUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739ECF8E295DDC5200B79A27 /* BrasilianLeagueUITests.swift */; };
-		739ECF91295DDC5200B79A27 /* BrasilianLeagueUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739ECF90295DDC5200B79A27 /* BrasilianLeagueUITestsLaunchTests.swift */; };
 		739ECFEE295DDD3D00B79A27 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 739ECFED295DDD3D00B79A27 /* Core.framework */; };
 		739ECFEF295DDD3D00B79A27 /* Core.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 739ECFED295DDD3D00B79A27 /* Core.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		739ED014295DDDCE00B79A27 /* FeatureGames.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 739ED013295DDDCE00B79A27 /* FeatureGames.framework */; };
@@ -67,7 +66,6 @@
 		739ECF84295DDC5200B79A27 /* BrasilianLeagueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrasilianLeagueTests.swift; sourceTree = "<group>"; };
 		739ECF8A295DDC5200B79A27 /* BrasilianLeagueUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrasilianLeagueUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		739ECF8E295DDC5200B79A27 /* BrasilianLeagueUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrasilianLeagueUITests.swift; sourceTree = "<group>"; };
-		739ECF90295DDC5200B79A27 /* BrasilianLeagueUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrasilianLeagueUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		739ECFED295DDD3D00B79A27 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		739ED013295DDDCE00B79A27 /* FeatureGames.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FeatureGames.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -155,7 +153,6 @@
 			isa = PBXGroup;
 			children = (
 				739ECF8E295DDC5200B79A27 /* BrasilianLeagueUITests.swift */,
-				739ECF90295DDC5200B79A27 /* BrasilianLeagueUITestsLaunchTests.swift */,
 			);
 			path = BrasilianLeagueUITests;
 			sourceTree = "<group>";
@@ -350,7 +347,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				739ECF8F295DDC5200B79A27 /* BrasilianLeagueUITests.swift in Sources */,
-				739ECF91295DDC5200B79A27 /* BrasilianLeagueUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
