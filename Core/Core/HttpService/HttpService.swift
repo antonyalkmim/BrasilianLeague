@@ -74,7 +74,7 @@ public enum HttpMethod: String {
     case delete = "DELETE"
 }
 
-public class HttpService {
+open class HttpService {
 
     /// closure executed before request
     public typealias RequestClosure = (Endpoint) -> URLRequest
@@ -103,20 +103,19 @@ public class HttpService {
     }
 
     @discardableResult
-    public func request<Response: Decodable>(_ endpoint: Endpoint) async throws -> Response {
+    open func request<Response: Decodable>(_ endpoint: Endpoint) async throws -> Response {
 
         // 1 - pass through interceptors
         let request = requestClosure(endpoint)
 
         // 2 - reachability & cache
         if !Reachability.isConnectedToNetwork {
-            if let cachedResponse = URLCache.shared.cachedResponse(for: request) {
+            if let cachedResponse = Current.cache().cachedResponse(for: request) {
                 os_log("Device offline, using cached response", type: .debug)
                 return try cachedResponse.data.decodeFromAPI()
             } else {
                 throw NetworkError.noInternetConnection
             }
-
         }
 
         // 3 - Exec request
@@ -127,7 +126,7 @@ public class HttpService {
         }
 
         // 4 - store cache response
-        URLCache.shared.storeCachedResponse(
+        Current.cache().storeCachedResponse(
             .init(response: httpURLResponse, data: data),
             for: request
         )

@@ -20,7 +20,8 @@ extension AppDelegate {
                     guard let response = response else { return }
                     os_log("✅ %@ [%@] ", type: .debug, String(response.statusCode), response.url?.absoluteString ?? "")
                 }
-            }
+            },
+            cache: { URLCache.shared }
         )
     }
 }

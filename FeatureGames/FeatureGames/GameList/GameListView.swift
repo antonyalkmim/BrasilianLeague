@@ -18,6 +18,7 @@ final class GameListView: ContainerView {
 
     lazy var errorView = HeroView() .. {
         $0.isHidden = true
+        $0.accessibilityIdentifier = "error_view"
     }
 
     lazy var tableView = UITableView() .. {
@@ -25,6 +26,7 @@ final class GameListView: ContainerView {
         $0.dataSource = self
         $0.delegate = self
         $0.separatorInset = .zero
+        $0.accessibilityIdentifier = "games_table_view"
     }
 
     // MARK: - Initializer

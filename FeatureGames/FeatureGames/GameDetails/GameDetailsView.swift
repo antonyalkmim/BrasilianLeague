@@ -29,6 +29,7 @@ final class GameDetailsView: ContainerView {
         $0.register(GameDetailDescriptionCell.self)
         $0.register(GameHighlightCell.self)
         $0.register(EmptyHighlightCell.self)
+        $0.accessibilityIdentifier = "game_details_tableview"
     }
 
     // MARK: - View Setup

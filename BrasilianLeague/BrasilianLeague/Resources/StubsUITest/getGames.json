@@ -1,0 +1,53 @@
+[
+    {
+        "id": "38f2baf1-d8fb-430d-b730-e463e1f3f658",
+        "mandatory_team": {
+            "name": "Vasco",
+            "initials": "VAS",
+            "brandUrl": "http://s.glbimg.com/es/sde/f/equipes/2014/04/14/vasco_60x60.png"
+        },
+        "visitor_team": {
+            "name": "Avaí",
+            "initials": "AVA",
+            "brandUrl": "http://s.glbimg.com/es/sde/f/equipes/2014/04/14/avai_60x60_.png"
+        },
+        "mandatory_team_goals": 1,
+        "visitor_team_goals": 2,
+        "stadium_name": "MARACANÃ",
+        "event_date": "2022-12-11T19:00:00.0000Z"
+    },
+    {
+        "id": "b7e5c35d-42ed-47dd-a125-0263a0c3200e",
+        "mandatory_team": {
+            "name": "Sporting",
+            "initials": "SPO",
+            "brandUrl": "http://s.glbimg.com/es/sde/f/equipes/2014/09/15/sport_60x60.png"
+        },
+        "visitor_team": {
+            "name": "Internacional",
+            "initials": "INT",
+            "brandUrl": "http://s.glbimg.com/es/sde/f/equipes/2014/04/14/internacional_60x60.png"
+        },
+        "mandatory_team_goals": 1,
+        "visitor_team_goals": 3,
+        "stadium_name": "BEIRA-RIO",
+        "event_date": "2022-12-13T19:00:00.000Z"
+    },
+    {
+        "id": "b7e5c35d-42ed-47dd-a125-0263a0c3200e",
+        "mandatory_team": {
+            "name": "Palmeiras",
+            "initials": "PAL",
+            "brandUrl": "http://s.glbimg.com/es/sde/f/equipes/2014/04/14/palmeiras_60x60.png"
+        },
+        "visitor_team": {
+            "name": "Chapecoense",
+            "initials": "CHA",
+            "brandUrl": "http://s.glbimg.com/es/sde/f/equipes/2015/05/06/chapecoense_60x60.png"
+        },
+        "mandatory_team_goals": 0,
+        "visitor_team_goals": 1,
+        "stadium_name": "Morumbi",
+        "event_date": "2022-12-13T16:00:0.000Z"
+    }
+]

@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     ) -> Bool {
         UINavigationBar.appearance().prefersLargeTitles = true
         setupWorld()
+        processLaunchArguments()
         return true
     }
 

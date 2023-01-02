@@ -26,6 +26,7 @@ final class GameSummaryView: ContainerView {
     lazy var timeAndPlaceLabel = UILabel() .. {
         $0.font = .preferredFont(forTextStyle: .caption1)
         $0.text = "SÁB 12/12/1212 MARACANÃ 16:00"
+        $0.accessibilityIdentifier = "game_summary_time_place"
     }
 
     // MARK: - Scoreboard views
@@ -42,11 +43,13 @@ final class GameSummaryView: ContainerView {
     lazy var mandatoryScoreLabel = UILabel() .. {
         $0.font = .preferredFont(forTextStyle: .title1)
         $0.text = "0"
+        $0.accessibilityIdentifier = "game_summary_mandatory_score_label"
     }
 
     lazy var visitorScoreLabel = UILabel() .. {
         $0.font = .preferredFont(forTextStyle: .title1)
         $0.text = "0"
+        $0.accessibilityIdentifier = "game_summary_visitor_score_label"
     }
 
     // MARK: - First Team Views
@@ -59,6 +62,7 @@ final class GameSummaryView: ContainerView {
     lazy var mandatoryInitialsLabel = UILabel() .. {
         $0.font = .preferredFont(forTextStyle: .title2)
         $0.text = "ABC"
+        $0.accessibilityIdentifier = "game_summary_mandatory_initials_label"
     }
 
     lazy var mandatoryBrandImageView = UIImageView() .. {
@@ -77,6 +81,7 @@ final class GameSummaryView: ContainerView {
     lazy var visitorInitialsLabel = UILabel() .. {
         $0.font = .preferredFont(forTextStyle: .title2)
         $0.text = "ABC"
+        $0.accessibilityIdentifier = "game_summary_visitor_initials_label"
     }
 
     lazy var visitorBrandImageView = UIImageView() .. {
@@ -89,6 +94,7 @@ final class GameSummaryView: ContainerView {
 
     override func configureSubviews() {
         addSubview(contentStack)
+        accessibilityIdentifier = "game_details_summary_view"
     }
 
     override func configureConstraints() {

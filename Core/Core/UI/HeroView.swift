@@ -21,6 +21,7 @@ public class HeroView: ContainerView {
         $0.tintColor = .darkGray
         $0.width(100)
         $0.height(140)
+        $0.accessibilityIdentifier = "error_view_image"
     }
 
     public var titleLabel = UILabel() .. {
@@ -28,6 +29,7 @@ public class HeroView: ContainerView {
         $0.numberOfLines = 2
         $0.textAlignment = .center
         $0.textColor = .darkGray
+        $0.accessibilityIdentifier = "error_view_title"
     }
 
     public var messageLabel = UILabel() .. {
@@ -35,6 +37,7 @@ public class HeroView: ContainerView {
         $0.numberOfLines = 0
         $0.textAlignment = .center
         $0.textColor = .lightGray
+        $0.accessibilityIdentifier = "error_view_message"
     }
 
     public override func configureSubviews() {

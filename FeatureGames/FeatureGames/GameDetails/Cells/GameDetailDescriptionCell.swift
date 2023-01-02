@@ -19,6 +19,7 @@ final class GameDetailDescriptionCell: UITableViewCell {
         $0.numberOfLines = 0
         $0.textAlignment = .center
         $0.textColor = .label
+        $0.accessibilityIdentifier = "game_details_title"
     }
 
     private lazy var gameDescriptionLabel = UILabel() .. {
@@ -26,6 +27,7 @@ final class GameDetailDescriptionCell: UITableViewCell {
         $0.numberOfLines = 0
         $0.textAlignment = .justified
         $0.textColor = .secondaryLabel
+        $0.accessibilityIdentifier = "game_details_description"
     }
 
     private lazy var contentStack = VStack(spacing: .large) {

@@ -24,6 +24,8 @@
 		73319D602960971C00336E61 /* TestSupport.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 73319D572960970E00336E61 /* TestSupport.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		73319D6A2960986100336E61 /* UIView+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73319D682960986000336E61 /* UIView+ext.swift */; };
 		73319D6B2960986100336E61 /* Date+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73319D692960986000336E61 /* Date+ext.swift */; };
+		7359732D29636FBA00DC746B /* Files+JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7359732C29636FBA00DC746B /* Files+JSON.swift */; };
+		735973312963719500DC746B /* LaunchArguments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 735973302963719500DC746B /* LaunchArguments.swift */; };
 		739ECFD2295DDCD400B79A27 /* Core.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 739ECFC9295DDCD400B79A27 /* Core.framework */; };
 		739ECFD7295DDCD400B79A27 /* HeroViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 739ECFD6295DDCD400B79A27 /* HeroViewTests.swift */; };
 		739ECFD8295DDCD400B79A27 /* Core.h in Headers */ = {isa = PBXBuildFile; fileRef = 739ECFCC295DDCD400B79A27 /* Core.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -85,6 +87,8 @@
 		73319D592960970E00336E61 /* TestSupport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestSupport.h; sourceTree = "<group>"; };
 		73319D682960986000336E61 /* UIView+ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ext.swift"; sourceTree = "<group>"; };
 		73319D692960986000336E61 /* Date+ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+ext.swift"; sourceTree = "<group>"; };
+		7359732C29636FBA00DC746B /* Files+JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Files+JSON.swift"; sourceTree = "<group>"; };
+		735973302963719500DC746B /* LaunchArguments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchArguments.swift; sourceTree = "<group>"; };
 		739ECFC9295DDCD400B79A27 /* Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		739ECFCC295DDCD400B79A27 /* Core.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		739ECFD1295DDCD400B79A27 /* CoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -213,6 +217,7 @@
 				739ED222295E098000B79A27 /* CustomTypes */,
 				739ED021295DE48100B79A27 /* Coordinator */,
 				739ECFCC295DDCD400B79A27 /* Core.h */,
+				735973302963719500DC746B /* LaunchArguments.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -241,6 +246,7 @@
 				739ED229295E0CA500B79A27 /* ContainerView.swift */,
 				739ED236295E152200B79A27 /* Weakable.swift */,
 				733196E9295E2FB700336E61 /* StackBuilder.swift */,
+				7359732C29636FBA00DC746B /* Files+JSON.swift */,
 			);
 			path = CustomTypes;
 			sourceTree = "<group>";
@@ -491,6 +497,7 @@
 				73F59BBF295E20860072985B /* NavigationController.swift in Sources */,
 				739ED237295E152200B79A27 /* Weakable.swift in Sources */,
 				73F59DC3295E2E430072985B /* SpacingConstants.swift in Sources */,
+				7359732D29636FBA00DC746B /* Files+JSON.swift in Sources */,
 				739ED21E295E091900B79A27 /* CascadeOperator.swift in Sources */,
 				73319D472960832300336E61 /* HeroView.swift in Sources */,
 				73F59DBD295E26560072985B /* UITableView+ext.swift in Sources */,
@@ -498,6 +505,7 @@
 				73319D35295F6A7500336E61 /* Encodable+ext.swift in Sources */,
 				739ED023295DE49000B79A27 /* Coordinator.swift in Sources */,
 				73319D31295F661D00336E61 /* Data+Ext.swift in Sources */,
+				735973312963719500DC746B /* LaunchArguments.swift in Sources */,
 				73319D33295F668900336E61 /* DateFormatter+Ext.swift in Sources */,
 				73319D2F295F64FE00336E61 /* NetworkError.swift in Sources */,
 				739ED224295E099F00B79A27 /* Controller.swift in Sources */,

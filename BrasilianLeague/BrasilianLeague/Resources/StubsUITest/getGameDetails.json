@@ -1,0 +1,57 @@
+{
+    "id": "38f2baf1-d8fb-430d-b730-e463e1f3f658",
+    "title": "Avaí se despede da Série A com vitória sobre o Flamengo",
+    "description": "Na última rodada do Brasileiro, Avaí vence o Flamengo por 2 a 1",
+    "highlights": [
+        {
+            "description": "FIM DE PARTIDA",
+            "event_minute": 92,
+            "type": "normal"
+        },
+        {
+            "description": "Avaí administra o tempo",
+            "event_minute": 51,
+            "type": "normal"
+        },
+        {
+            "description": "Natanael puxa contra-ataque em velocidade para o campo do Flamengo, que não tem marcadores, mas defesa se recupera e fica com a bola",
+            "event_minute": 49,
+            "type": "normal"
+        },
+        {
+            "description": "Matheuzinho recebe ótimo lançamento no lado direito do ataque, passa para Gabigol na grande área. Atacante chuta chapado para fora, à direita de Glédson",
+            "event_minute": 46,
+            "type": "normal"
+        },
+        {
+            "description": "GOL DO FLAMENGO",
+            "event_minute": 45,
+            "type": "goal"
+        },
+        {
+            "description": "Jogo terminará aos 52 minutos",
+            "event_minute": 44,
+            "type": "normal"
+        },
+        {
+            "description": "Rodinei avança pela ponta direita, cruza com perigo, mas ninguém chega para completar",
+            "event_minute": 41,
+            "type": "normal"
+        },
+        {
+            "description": "Matheuzinho avança na ponta, tenta cruzar para a área, a bola é desviada na direção do gol e Glédson faz a defesa",
+            "event_minute": 39,
+            "type": "normal"
+        },
+        {
+            "description": "Gaspar avança pelo lado esquerdo, passa por Thiago Maia, cruza para a área, mas ninguém chega",
+            "event_minute": 32,
+            "type": "normal"
+        },
+        {
+            "description": "GOL DO FLAMENGO",
+            "event_minute": 41,
+            "type": "goal"
+        }
+    ]
+}
