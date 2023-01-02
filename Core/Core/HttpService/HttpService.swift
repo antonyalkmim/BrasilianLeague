@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import os.log
 
 public struct Endpoint {
     /// API host
@@ -107,9 +108,15 @@ public class HttpService {
         // 1 - pass through interceptors
         let request = requestClosure(endpoint)
 
-        // 2 - reachability
+        // 2 - reachability & cache
         if !Reachability.isConnectedToNetwork {
-            throw NetworkError.noInternetConnection
+            if let cachedResponse = URLCache.shared.cachedResponse(for: request) {
+                os_log("Device offline, using cached response", type: .debug)
+                return try cachedResponse.data.decodeFromAPI()
+            } else {
+                throw NetworkError.noInternetConnection
+            }
+
         }
 
         // 3 - Exec request
@@ -119,10 +126,16 @@ public class HttpService {
             throw NetworkError.connectionError
         }
 
-        // 4 - run interceptors for response
+        // 4 - store cache response
+        URLCache.shared.storeCachedResponse(
+            .init(response: httpURLResponse, data: data),
+            for: request
+        )
+
+        // 5 - run interceptors for response
         responseClosure(httpURLResponse, data)
 
-        // 5 - decode api payload data
+        // 6 - decode api payload data
         let decodedResponse: Response = try data.decodeFromAPI()
 
         return decodedResponse
