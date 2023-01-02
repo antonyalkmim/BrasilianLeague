@@ -58,7 +58,7 @@ final class GameListView: ContainerView {
 
     func showGames(_ games: [GameSummary]) {
         // reset state
-        errorView.isHidden = false
+        errorView.isHidden = true
 
         // reload data
         self.items = games
@@ -66,6 +66,7 @@ final class GameListView: ContainerView {
     }
 
     func showEmptyState() {
+        tableView.reloadData()
         errorView.isHidden = false
         errorView.imageView.image = UIImage(systemName: "doc")
         errorView.titleLabel.text = L10n.List.Error.Empty.title
