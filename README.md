@@ -1,96 +1,63 @@
-## Antony Alkmim
-**Globo.com: coding challenge**
+## Brasileirão
 
-## O Desafio
+[![Run tests](https://github.com/SelecaoGlobocom/antonyalkmim/actions/workflows/tests.yml/badge.svg?branch=main&event=push)](https://github.com/SelecaoGlobocom/antonyalkmim/actions/workflows/tests.yml)
 
-Você deverá criar um aplicativo, chamado de "Brasileirão", para acompanhamento de jogos de futebol.
 
-O aplicativo deverá funcionar em dispositivos iOS, Android ou em browsers desktop (com javascript), dependendo da vaga para a qual você está aplicando (Player iOS, Player Android ou Player JS, respectivamente)
+Este é um projeto de testes usado para aplicar novos conceitos com o objetivo de aprendizagem.
 
-Você também deverá fornecer a API que provê os dados para o aplicativo com a tecnologia de sua escolha. Essa API não será avaliada, podendo ser implementada utilizando soluções prontas para backend. Apenas a implementação do aplicativo (incluindo a comunicação com o backend escolhido) será avaliada.
+## Screenshots
 
-## Considerações Gerais
+<p align="center">
+  <img src=".github/images/gamelist.png" align="center" width=300>
+  <img src=".github/images/gamedetails.png" align="center" width=300>
+</p>
 
-Você deverá usar este repositório como o principal do projeto. Todos os seus commits devem estar registrados aqui.
 
-**Registre tudo**: Ideias que gostaria de implementar se tivesse mais tempo (explique como você as resolveria), decisões tomadas e seus porquês, arquiteturas testadas e os motivos de terem sido modificadas ou abandonadas.
+## Requisitos
 
-Sinta-se livre para incluir ferramentas e bibliotecas open source.
+1. Xcode 14.0
 
-Para ajudar, disponibilizamos uma máquina na Amazon caso você precise de uma infraestrutura para o seu código backend (veja o README dentro do diretório amazon_keypair).
+## Como rodar o projeto
+1. Clone este repositório
+2. Instale as ferramentas de desenvolvimento: `brew bundle && bundle install`
+3. Selecione o target `BrasilianLeague` e execute o aplicativo no simulator
 
-Avaliaremos sua submissão como se fosse um produto mínimo viável (MVP), pronto para ser publicado em produção, mas que continuará sendo expandido e mantido no futuro. A avaliação terá como foco as seguintes características:
 
-* se atende aos requisitos básicos.
-* a qualidade do código, do projeto de software, da arquitetura.
-* os testes.
-* a automação.
-* a escalabilidade.
+#### Snapshot Testing
+⚠️ Os snapshots de teste foram registrados e validados utilizando o dispositivo `iPhone 14 Pro Max iOS 16.0`. Rodar os testes em dispositivos de diferente tamanho de tela e/ou versão de sistema operacional pode fazer com que os testes falhem.
 
-Em caso de dúvidas, pergunte.
-
-## O Aplicativo
-
-O aplicativo possui duas telas: uma listagem de jogos e o detalhe de cada jogo.
-
-### Tela Inicial
-
-- Lista de jogos
-  - Nome dos times
-  - Escudos
-  - Placar
-  - Data e horário
-
-Considere as seguintes condições:
-
-- A lista de jogos deve estar disponível offline
-
-- O usuário pode querer atualizar a lista de jogos
-
-- Clicar sobre um jogo leva o usuário para a tela de detalhe daquele jogo
-
-Exemplo de uma lista de jogos na web (lado direito): [brasileirão série a](http://globoesporte.globo.com/futebol/brasileirao-serie-a/).
-
-### Detalhe do Jogo
-
-- Detalhe do jogo
-  - Nome dos times
-  - Escudos
-  - Placar
-  - Data e horário
-  - Local
-
-- Lance a Lance
-  - Lista de momentos importantes do jogo
-    - Tempo no jogo
-    - Descrição
-
-- Atalho para voltar para a tela inicial
-
-## Imagens
-
-Escudos dos times
-
-```
-http://s.glbimg.com/es/sde/f/equipes/2014/04/14/vasco_60x60.png
-http://s.glbimg.com/es/sde/f/equipes/2014/04/14/avai_60x60_.png
-http://s.glbimg.com/es/sde/f/equipes/2014/09/15/sport_60x60.png
-http://s.glbimg.com/es/sde/f/equipes/2014/04/14/internacional_60x60.png
-http://s.glbimg.com/es/sde/f/equipes/2014/04/14/palmeiras_60x60.png
-http://s.glbimg.com/es/sde/f/equipes/2015/05/06/chapecoense_60x60.png
-http://s.glbimg.com/es/sde/f/equipes/2014/04/14/atletico_mg_60x60.png
-http://s.glbimg.com/es/sde/f/equipes/2014/04/14/coritiba_60x60.png
-http://s.glbimg.com/es/sde/f/equipes/2014/04/14/gremio_60x60.png
-http://s.glbimg.com/es/sde/f/equipes/2015/04/29/cruzeiro_65.png
-http://s.glbimg.com/es/sde/f/equipes/2015/06/24/atletico-pr_2015_65.png
-http://s.glbimg.com/es/sde/f/equipes/2014/04/14/sao_paulo_60x60.png
-http://s.glbimg.com/es/sde/f/equipes/2014/04/14/flamengo_60x60.png
-http://s.glbimg.com/es/sde/f/equipes/2014/04/14/corinthians_60x60.png
-http://s.glbimg.com/es/sde/f/equipes/2014/04/14/ponte_preta_60x60.png
-http://s.glbimg.com/es/sde/f/equipes/2014/04/14/figueirense_60x60.png
-http://s.glbimg.com/es/sde/f/equipes/2014/04/14/goias_60x60.png
-http://s.glbimg.com/es/sde/f/equipes/2015/05/05/fluminense-escudo-65x65.png
-http://s.glbimg.com/es/sde/f/equipes/2014/04/14/santos_60x60.png
+#### Automação
+Neste projeto está configurado o Github Actions juntamente com o fastlane para que em todos os pull-requests sejam executado todos os testes de unidade e de UI. Para executar todos os testes utilizando o fastlane:
+```sh
+bundle exec fastlane ios tests
 ```
 
+## Arquitetura
 
+Esse projeto utiliza o padrão de arquitetura MVVM-C (model-view-viewmodel-coordinator) separado em módulos para manter o código organizado e com responsabilidade única. 
+
+#### Módulos
+```
+BrasilianLeague: app
+Core: framework
+FeatureGames: framework
+```
+
+Para executar TODOS os testes configurados no projeto, deverá compilar/executar o scheme `AllTests`. Caso queira executar os testes especificos de cada módulo, selecione um único o módulo, ex: `Core`, `FeatureGames`, `BrasilianLeagueUI`
+
+## Backend
+
+Para simular um servidor de API foi utilizado o Apiary. A documentação das rotas da API pode ser encontrada em https://brasilianleague.docs.apiary.io.
+### Third-party libraries 
+> Todas as bibliotecas estão sendo utilizadas através do Swift Package Manager.
+
+- [Nuke](https://github.com/kean/Nuke) para carregar as imagens dos escudos dos times
+- [TinyConstraints](https://github.com/roberthein/TinyConstraints) para facilitar a utilização de constraints nas views
+- [SnapshotTesting](https://github.com/pointfreeco/swift-snapshot-testing) para auxiliar na escrita de testes de Snapshots
+
+### Melhorias
+
+Aqui estão algumas possiveis melhorias que infelizmente iriam gastar um pouco mais de tempo e portanto preferi não implementar em um primeiro momento.
+- [ ] Configurar Xcodegen para evitar de commitar os arquivos `.xcodeproj` e `.pbxproj`.
+- [ ] Adicionar paginas para outras rodadas do campeonato
+- [ ] Adicionar um tema de cores e ícones customizado. Foram utilizados `SF Icons` e cores padrões do sistema (ex: `UIColor.systemBackground`) para facilitar e agilizar o desenvolvimento do aplicativo e suportar light e dark mode.

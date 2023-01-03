@@ -5,6 +5,8 @@
 //  Created by antony.alkmim on 30/12/22.
 //
 
+// SEE: How to Control the World https://www.pointfree.co/blog/posts/21-how-to-control-the-world
+
 import Foundation
 
 public var Current: World! // swiftlint:disable:this identifier_name
