@@ -3,7 +3,7 @@ name: Run tests
 jobs:
   tests:
     name: Build
-    runs-on: macOS-latest
+    runs-on: macOS-12
     strategy:
       matrix:
         destination:
@@ -12,8 +12,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
       
-      - name: Install Bundle
-        run: bundle install
+      - name: Install tools
+        run: |
+          brew install swiftgen
+          bundle install
       
       - name: Build and Test
         run: bundle exec fastlane ios tests

@@ -380,7 +380,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "$HOME/.mint/bin/swiftlint\n";
+			shellScript = "swiftlint\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

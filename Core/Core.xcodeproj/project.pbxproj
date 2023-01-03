@@ -455,7 +455,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "`readlink $HOME/.mint/bin/swiftgen`\n";
+			shellScript = "swiftgen\n";
 		};
 		739ED01E295DE01C00B79A27 /* Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -474,7 +474,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "$HOME/.mint/bin/swiftlint\n";
+			shellScript = "swiftlint\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

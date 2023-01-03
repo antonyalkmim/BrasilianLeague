@@ -24,7 +24,8 @@ platform :ios do
       workspace: "BrasilianLeague.xcworkspace",
       scheme: "AllTests",
       device: 'iPhone 14 Pro Max (16.0)',
-      code_coverage: true
+      code_coverage: true,
+      build_for_testing: true
     )
   end
 
